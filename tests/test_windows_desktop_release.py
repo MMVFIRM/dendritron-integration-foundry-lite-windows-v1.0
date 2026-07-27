@@ -141,6 +141,9 @@ def test_windows_packaging_files_encode_safe_one_click_defaults():
     assert 'name="FoundryLite"' in spec
     assert '"rfc3987_syntax"' in spec
 
+    desktop = (root / "src/difoundry/lite/desktop.py").read_text()
+    assert "log_config=None" in desktop
+
     workflow = (root / ".github/workflows/windows-installer.yml").read_text()
     assert "runs-on: windows-latest" in workflow
     assert "actions/attest-build-provenance@v2" in workflow

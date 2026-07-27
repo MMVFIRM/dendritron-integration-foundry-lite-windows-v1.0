@@ -188,6 +188,7 @@ class DesktopRuntime:
             host=self.settings.host,
             port=self.settings.port,
             log_level="warning",
+            log_config=None,
             proxy_headers=False,
             access_log=False,
         )
