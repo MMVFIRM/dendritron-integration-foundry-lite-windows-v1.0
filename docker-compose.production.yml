@@ -1,0 +1,71 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: difoundry
+      POSTGRES_USER: difoundry
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U difoundry"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [control]
+
+  api:
+    build: .
+    env_file: .env
+    environment:
+      # The only trusted browser-facing hop in this topology is the fixed edge network.
+      DIFOUNDRY_TRUSTED_PROXY_CIDRS: 172.30.0.0/24
+    depends_on:
+      postgres: {condition: service_healthy}
+    command: ["uvicorn", "difoundry.api:app", "--host", "0.0.0.0", "--port", "8000", "--no-proxy-headers"]
+    read_only: true
+    tmpfs: [/tmp]
+    volumes:
+      - audit-anchors:/var/lib/difoundry-audit
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    networks: [control, edge]
+    restart: unless-stopped
+
+  worker:
+    build: .
+    env_file: .env
+    depends_on:
+      postgres: {condition: service_healthy}
+    command: ["difoundry-worker", "--poll-seconds", "1", "--lease-seconds", "60", "--heartbeat-seconds", "20"]
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    networks: [control]
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.27-alpine
+    depends_on: [api]
+    ports: ["443:443"]
+    volumes:
+      - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./deploy/nginx/certs:/etc/nginx/certs:ro
+    read_only: true
+    tmpfs: [/var/cache/nginx, /var/run]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    cap_add: ["NET_BIND_SERVICE"]
+    networks: [edge]
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  audit-anchors:
+networks:
+  control: {internal: true}
+  edge:
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24

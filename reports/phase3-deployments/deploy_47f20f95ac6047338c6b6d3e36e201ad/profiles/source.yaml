@@ -1,0 +1,12 @@
+system_id: source
+name: Generic Source
+version: '1'
+protocol: custom
+base_url: null
+authentication:
+  kind: none
+  secret_refs: {}
+  config: {}
+operations: []
+objects: []
+metadata: {}

@@ -1,0 +1,4923 @@
+{
+  "ambiguity": [
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.7619565217391304,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6032608695652174,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_6bb411c7a71a"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.36277777777777787,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.7823333333333333,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_b63bed5f8ee1",
+              "specialist_317ac53b0b15"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_6bb411c7a71a",
+              "specialist_a2c0307aa2b2"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.36277777777777787,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.7619565217391304,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6032608695652174,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_6bb411c7a71a"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.36277777777777787,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.8259302325581395,
+        "public_central": 0.8259302325581395,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_31cddc6a5123",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_6bb411c7a71a"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.29011627906976745,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.8036363636363637,
+        "public_central": 0.8036363636363637,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6727272727272727,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_31cddc6a5123",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6727272727272727,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_6bb411c7a71a",
+              "specialist_a2c0307aa2b2"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.32727272727272727,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.8259302325581395,
+        "public_central": 0.8259302325581395,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_31cddc6a5123",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_6bb411c7a71a"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.29011627906976745,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.7823333333333333,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_31cddc6a5123",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.36277777777777787,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.7823333333333333,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_31cddc6a5123",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.36277777777777787,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.8259302325581395,
+        "smb_east": 0.8259302325581395
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_06daa6937294",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.29011627906976745,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.8036363636363637,
+        "smb_east": 0.8036363636363637
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_b63bed5f8ee1",
+              "specialist_317ac53b0b15"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_06daa6937294",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6727272727272727,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6727272727272727,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.32727272727272727,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.8259302325581395,
+        "smb_east": 0.8259302325581395
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_06daa6937294",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.7098837209302326,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.29011627906976745,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.7823333333333333,
+        "public_central": 0.7823333333333333,
+        "smb_east": 0.7823333333333333
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_06daa6937294",
+              "specialist_b4c88fc4a464"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.6372222222222221,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.36277777777777787,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    }
+  ],
+  "ambiguous_case_abstention_rate": 1.0,
+  "ambiguous_case_count": 12,
+  "benchmark": "phase2-dendritron-routing-tissue",
+  "best_single_field_accuracy": 0.3333333333333333,
+  "branch_scoped_adaptation": {
+    "changed_branches": [
+      "smb_east"
+    ],
+    "pass": true
+  },
+  "categorical_tuple_lookup_accuracy": 0.7555555555555555,
+  "categorical_tuple_seen_fraction": 0.6222222222222222,
+  "claim_boundary": "architectural routing fixture with overlapping multi-field families; not a real-world integration accuracy estimate, throughput study, or evidence of Dendritron superiority over trained statistical baselines",
+  "damage_isolation": {
+    "pass": true
+  },
+  "dendritron_coverage": 0.8916666666666667,
+  "dendritron_holdout_accuracy": 0.8916666666666667,
+  "dendritron_selective_accuracy": 1.0,
+  "evaluation_kind": "deterministic synthetic overlapping holdout",
+  "gate_pass": true,
+  "holdout_abstention_rate": 0.10833333333333328,
+  "holdout_case_count": 360,
+  "mean_active_specialist_fraction": 0.19814814814814813,
+  "novelty": [
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.6886,
+        "public_central": 0.6886,
+        "smb_east": 0.6886
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.519,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.6827358490566038,
+        "public_central": 0.6827358490566038,
+        "smb_east": 0.6827358490566038
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_299eabd476dd"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.4712264150943396,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_31cddc6a5123",
+              "specialist_06daa6937294"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.4712264150943396,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.4712264150943396,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.5287735849056604,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.6720588235294118,
+        "public_central": 0.6720588235294118,
+        "smb_east": 0.6720588235294118
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.45343137254901955,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.45343137254901955,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.45343137254901955,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.5465686274509804,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.6886,
+        "public_central": 0.6886,
+        "smb_east": 0.6886
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.519,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.6886,
+        "public_central": 0.6886,
+        "smb_east": 0.6886
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.481,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.519,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    },
+    {
+      "abstained": true,
+      "branch_activations": {
+        "enterprise_west": 0.63125,
+        "public_central": 0.63125,
+        "smb_east": 0.63125
+      },
+      "diagnostics": {
+        "branches": {
+          "enterprise_west": {
+            "active_specialists": [
+              "specialist_317ac53b0b15",
+              "specialist_b63bed5f8ee1"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.38541666666666663,
+            "specialist_count": 3
+          },
+          "public_central": {
+            "active_specialists": [
+              "specialist_b4c88fc4a464",
+              "specialist_31cddc6a5123"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.38541666666666663,
+            "specialist_count": 3
+          },
+          "smb_east": {
+            "active_specialists": [
+              "specialist_a2c0307aa2b2",
+              "specialist_daeb0df5c154"
+            ],
+            "eligible": true,
+            "hard_activation": 1.0,
+            "learned_activation": 0.38541666666666663,
+            "specialist_count": 3
+          }
+        }
+      },
+      "novelty_score": 0.6145833333333334,
+      "ownership_key": null,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "route_id": "dispatch",
+      "router_kind": "dendritron_tissue",
+      "selected_branch_id": null,
+      "selected_specialist_ids": [],
+      "tissue_version": 18
+    }
+  ],
+  "novelty_abstention_rate": 1.0,
+  "novelty_case_count": 6,
+  "overlap_design": {
+    "all_categorical_values_appear_in_every_branch": true,
+    "exact_training_event_reuse": false,
+    "holdout_single_coordinate_corruption_probability": 0.35,
+    "notes": "Branch ownership depends on conjunctions. Enterprise-east and approximately-$9k SMB cases are intentionally present."
+  },
+  "persistence": {
+    "path": "reports/phase2-benchmark.tissue.json",
+    "round_trip": true
+  },
+  "predictions": [
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-2",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-35",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-3",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-14",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-6",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-31",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-38",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-25",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-11",
+      "expected": "smb_east",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-11",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-10",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-24",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-26",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-32",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-2",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-39",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-8",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-10",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-31",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-3",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": "Ownership margin 0.0119 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-1",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-36",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-37",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-33",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-20",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-8",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-16",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-2",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-22",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": "Ownership margin 0.0119 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-24",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-36",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-2-28",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0111 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-2",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-1-36",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-30",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-5",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-1",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-18",
+      "expected": "smb_east",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-33",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-28",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-1-9",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-24",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-1",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-13",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-36",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-0-34",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-36",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-31",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-37",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-26",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-6",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-8",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-17",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-1-20",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-28",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-1-17",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-28",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-1",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-7",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-11",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-9",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-15",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-23",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-15",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-17",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-30",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-36",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-2",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-21",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-19",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-25",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-33",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-37",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-14",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-19",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0111 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-1-29",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-23",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-30",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-31",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-1-3",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-11",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-27",
+      "expected": "smb_east",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-12",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-19",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-20",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-15",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-34",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-0",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-16",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-1",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-10",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-1-23",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-29",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-10",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-4",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-11",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-4",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-35",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-10",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-9",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-1",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-28",
+      "expected": "smb_east",
+      "novelty": 0.10904907975460132,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-5",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-0",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-8",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-18",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-13",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-17",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-13",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-1",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-3",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-34",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-25",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-13",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-25",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-35",
+      "expected": "smb_east",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-6",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-22",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-32",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-16",
+      "expected": "public_central",
+      "novelty": 0.2713687150837989,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-9",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-18",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-22",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-14",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-21",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-39",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-37",
+      "expected": "smb_east",
+      "novelty": 0.1201219512195123,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-38",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-36",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-2-7",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-4",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-21",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-9",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-11",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-27",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-30",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-12",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-38",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-21",
+      "expected": "enterprise_west",
+      "novelty": 0.1940058479532164,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-8",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-0",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-6",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-31",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-24",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-13",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-19",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-2-10",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0111 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-39",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": "Ownership margin 0.0119 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-29",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-6",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-16",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-27",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-30",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-23",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-11",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-16",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-7",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-0",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-35",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-2",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-19",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-39",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-30",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-6",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-26",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-10",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-13",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-23",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-31",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-28",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-35",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-19",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-27",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-38",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-38",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-18",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-26",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-18",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-20",
+      "expected": "smb_east",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-3",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-29",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-16",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-3",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-14",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-13",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-22",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-29",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-14",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-19",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-10",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-15",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-36",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-10",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-5",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-17",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-15",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-6",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-8",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-1",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-39",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-34",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-24",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-28",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-32",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-33",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-34",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-34",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-14",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-32",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-4",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": "Ownership margin 0.0119 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-16",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-26",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-1",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-32",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-5",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-0",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-13",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-37",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-29",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-38",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-3",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-16",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-4",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-22",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-17",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-9",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-27",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-31",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-24",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-1-28",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-4",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-27",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-25",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-12",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-30",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-27",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-33",
+      "expected": "smb_east",
+      "novelty": 0.1201219512195123,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-39",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-19",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-22",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-26",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-15",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-28",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-22",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-2-37",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-6",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-11",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-24",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-2-21",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-35",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-32",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-20",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-16",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-0-23",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0111 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-3",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-8",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-29",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-23",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-0",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-21",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-7",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-33",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-38",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-15",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-22",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-32",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-4",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-2-35",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-18",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-25",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-29",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-30",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-12",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-25",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-7",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-18",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-9",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-12",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-33",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-20",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-7",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-30",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-14",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-9",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-5",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-25",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-22",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-0-39",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-20",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-2",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-12",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-6",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-39",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-12",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-32",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-27",
+      "expected": "public_central",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-20",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-17",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-2",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-public_central-1-38",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-27",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-32",
+      "expected": "smb_east",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-19",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-15",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-2",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-37",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-17",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-15",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-34",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-26",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-23",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-37",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-33",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-37",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-5",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0111 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-0-33",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-21",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-8",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-29",
+      "expected": "public_central",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-21",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-39",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-14",
+      "expected": "smb_east",
+      "novelty": 0.26207865168539335,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-31",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-3",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-4",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-17",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-24",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-34",
+      "expected": "smb_east",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-13",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-11",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-35",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-38",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-0",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-2-24",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": "Ownership margin 0.0108 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-14",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-21",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-34",
+      "expected": "enterprise_west",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-18",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-0",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-25",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-4",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-2-20",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-0",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-enterprise_west-1-5",
+      "expected": "enterprise_west",
+      "novelty": 0.26207865168539335,
+      "reason": "Ownership margin 0.0000 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-18",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-26",
+      "expected": "enterprise_west",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-7",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-31",
+      "expected": "public_central",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-7",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-7",
+      "expected": "public_central",
+      "novelty": 0.28055555555555556,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": true,
+      "active_specialists": 0,
+      "available_specialists": 0,
+      "dendritron": null,
+      "event_id": "evt_2-smb_east-1-12",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": "Ownership margin 0.0119 is below required margin",
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-36",
+      "expected": "enterprise_west",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-0-35",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-2-5",
+      "expected": "public_central",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-0-9",
+      "expected": "smb_east",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "public_central",
+      "event_id": "evt_2-public_central-1-26",
+      "expected": "public_central",
+      "novelty": 0.18382352941176483,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-2-8",
+      "expected": "smb_east",
+      "novelty": 0.2238505747126438,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-0-12",
+      "expected": "enterprise_west",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "enterprise_west",
+      "event_id": "evt_2-enterprise_west-1-23",
+      "expected": "enterprise_west",
+      "novelty": 0.14186746987951815,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    },
+    {
+      "abstained": false,
+      "active_specialists": 2,
+      "available_specialists": 9,
+      "dendritron": "smb_east",
+      "event_id": "evt_2-smb_east-1-5",
+      "expected": "smb_east",
+      "novelty": 0.20406976744186056,
+      "reason": null,
+      "static_priority": "enterprise_west"
+    }
+  ],
+  "single_field_accuracy": {
+    "channel": 0.3333333333333333,
+    "region": 0.3333333333333333,
+    "segment": 0.3333333333333333,
+    "service": 0.3333333333333333
+  },
+  "static_priority_holdout_accuracy": 0.3333333333333333,
+  "training": {
+    "examples": 18,
+    "specialists": 9,
+    "tissue_version": 18,
+    "touched_branches": {
+      "dispatch/enterprise_west": 6,
+      "dispatch/public_central": 6,
+      "dispatch/smb_east": 6
+    }
+  },
+  "training_case_count": 18,
+  "version": "0.7.2"
+}

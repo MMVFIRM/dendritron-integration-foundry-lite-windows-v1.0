@@ -1,0 +1,20 @@
+system_id: analytics_lake
+name: Example Analytics Lake
+version: "1"
+protocol: file
+operations:
+  - operation_id: append_customer_snapshot
+    method: APPEND
+    path: customer_snapshots
+    description: Append a normalized customer snapshot
+    required_permissions: [snapshots.append]
+    request_schema:
+      type: object
+      required: [customer_key, display_name, lifecycle]
+      properties:
+        customer_key:
+          type: string
+        display_name:
+          type: string
+        lifecycle:
+          type: string

@@ -1,0 +1,54 @@
+name: Windows installer
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version
+        required: true
+        default: "1.0.0"
+  push:
+    tags: ["foundry-lite-v*"]
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install Inno Setup
+        shell: pwsh
+        run: choco install innosetup --no-progress -y
+      - name: Resolve version
+        id: version
+        shell: pwsh
+        run: |
+          $version = "${{ inputs.version }}"
+          if (-not $version) { $version = "${{ github.ref_name }}" -replace '^foundry-lite-v','' }
+          "version=$version" >> $env:GITHUB_OUTPUT
+      - name: Build, test, package, and optionally sign
+        shell: pwsh
+        env:
+          WINDOWS_CERTIFICATE_BASE64: ${{ secrets.WINDOWS_CERTIFICATE_BASE64 }}
+          WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
+        run: .\packaging\windows\build.ps1 -Version "${{ steps.version.outputs.version }}"
+      - name: Attest installer provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: release/windows/Dendritron-Foundry-Lite-*-Setup.exe
+      - name: Upload Windows release
+        uses: actions/upload-artifact@v4
+        with:
+          name: Dendritron-Foundry-Lite-Windows-${{ steps.version.outputs.version }}
+          path: release/windows/*
+          if-no-files-found: error
+          retention-days: 30

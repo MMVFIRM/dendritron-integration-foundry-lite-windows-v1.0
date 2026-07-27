@@ -1,0 +1,32 @@
+system_id: finance_sink
+name: finance_sink
+version: '1'
+protocol: custom
+base_url: null
+authentication:
+  kind: none
+  secret_refs: {}
+  config: {}
+operations:
+- operation_id: write_invoice
+  method: WRITE
+  path: records
+  description: ''
+  object_id: null
+  operation_kind: create
+  request_schema:
+    type: object
+    properties:
+      invoice_name:
+        type: string
+    required:
+    - invoice_name
+    additionalProperties: false
+  response_schema: {}
+  required_permissions:
+  - records.write
+  idempotency_supported: false
+  timeout_seconds: 30.0
+  metadata: {}
+objects: []
+metadata: {}

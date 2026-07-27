@@ -1,0 +1,52 @@
+{
+  "release": "Foundry Lite v0.1",
+  "package_version": "0.8.0",
+  "evaluation_kind": "release_verification",
+  "claim_boundary": "These results verify the packaged local product paths and inherited regression suite. They do not measure universal SaaS compatibility, autonomous discovery coverage, usability, throughput, long-duration reliability, or security against an untrusted local operating-system user.",
+  "source_tree_tests": {"passed": 132, "failed": 0},
+  "lite_specific_tests": {"passed": 21, "failed": 0},
+  "installed_wheel_tests_with_source_removed": {"passed": 132, "failed": 0},
+  "extracted_final_zip_tests": {"passed": 132, "failed": 0},
+  "product_fixture": {
+    "path": "reports/foundry-lite-benchmark.json",
+    "gates_passed": 11,
+    "gates_total": 11,
+    "passed": true
+  },
+  "verified_capabilities": [
+    "no-account local workspace",
+    "live Uvicorn default launch",
+    "autonomous OpenAPI and Swagger discovery",
+    "GraphQL introspection discovery",
+    "OData metadata discovery",
+    "capability-index and OPTIONS inference",
+    "read-only behavioral fallback",
+    "encrypted local credentials",
+    "no plaintext credential API exposure",
+    "chat-created task-specific daughter",
+    "plain-language unresolved-business-value handling",
+    "artifact-manifest verification",
+    "trigger-condition abstention",
+    "polling baseline and change detection",
+    "browser-independent embedded execution",
+    "local session boundary",
+    "daughter ZIP export",
+    "disabled docs and schema-upload surfaces"
+  ],
+  "static_validation": {
+    "javascript_syntax": "pass",
+    "html_parse": "pass",
+    "docker_compose_yaml": "pass",
+    "wheel_static_assets": "pass"
+  },
+  "known_unverified_boundaries": [
+    "commercial SaaS provider compatibility matrix",
+    "OAuth provider application registrations",
+    "public remote webhook relay",
+    "desktop and browser traffic observation",
+    "long-duration reliability and throughput",
+    "independent usability study",
+    "penetration testing",
+    "desktop-native installer and auto-update"
+  ]
+}

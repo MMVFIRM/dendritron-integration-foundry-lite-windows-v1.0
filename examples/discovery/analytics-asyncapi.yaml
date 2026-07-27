@@ -1,0 +1,31 @@
+asyncapi: 3.0.0
+info:
+  title: Analytics Event Bus
+  version: 1.0.0
+components:
+  schemas:
+    CustomerSnapshot:
+      type: object
+      required: [customer_key, display_name, lifecycle]
+      properties:
+        customer_key:
+          type: string
+        display_name:
+          type: string
+        lifecycle:
+          type: string
+        email:
+          type: string
+          format: email
+  messages:
+    CustomerSnapshotMessage:
+      name: CustomerSnapshot
+      payload:
+        $ref: '#/components/schemas/CustomerSnapshot'
+channels:
+  customer.snapshots:
+    publish:
+      operationId: publishCustomerSnapshot
+      summary: Publish a normalized customer snapshot
+      message:
+        $ref: '#/components/messages/CustomerSnapshotMessage'

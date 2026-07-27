@@ -1,0 +1,190 @@
+examples:
+- event:
+    event_id: evt_a1
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: a1
+    observed_at: '2026-07-27T05:20:14.355895Z'
+    schema_version: '1'
+    correlation_id: corr_f8a0d6ae3da04c1a8c651f7d27758f26
+    idempotency_key: idem_a1
+    payload:
+      segment: enterprise
+      region: west
+      channel: direct
+      service: managed
+      amount: 9000
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: enterprise_west
+  reward: 1.0
+- event:
+    event_id: evt_a2
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: a2
+    observed_at: '2026-07-27T05:20:14.355954Z'
+    schema_version: '1'
+    correlation_id: corr_e0f857d5ee1041309382f7ceb54d7cc3
+    idempotency_key: idem_a2
+    payload:
+      segment: enterprise
+      region: west
+      channel: partner
+      service: managed
+      amount: 12000
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: enterprise_west
+  reward: 1.0
+- event:
+    event_id: evt_a3
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: a3
+    observed_at: '2026-07-27T05:20:14.355974Z'
+    schema_version: '1'
+    correlation_id: corr_34b9e3c9cab241dd9d486fd39063b011
+    idempotency_key: idem_a3
+    payload:
+      segment: strategic
+      region: west
+      channel: direct
+      service: premium
+      amount: 18000
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: enterprise_west
+  reward: 1.0
+- event:
+    event_id: evt_b1
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: b1
+    observed_at: '2026-07-27T05:20:14.355988Z'
+    schema_version: '1'
+    correlation_id: corr_5711acdb3d614788b8d043b2a7a727ee
+    idempotency_key: idem_b1
+    payload:
+      segment: smb
+      region: east
+      channel: selfserve
+      service: starter
+      amount: 120
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: smb_east
+  reward: 1.0
+- event:
+    event_id: evt_b2
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: b2
+    observed_at: '2026-07-27T05:20:14.356001Z'
+    schema_version: '1'
+    correlation_id: corr_87776d77b8034a9fa4ffd263af0ea8b7
+    idempotency_key: idem_b2
+    payload:
+      segment: small-business
+      region: east
+      channel: web
+      service: starter
+      amount: 250
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: smb_east
+  reward: 1.0
+- event:
+    event_id: evt_b3
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: b3
+    observed_at: '2026-07-27T05:20:14.356012Z'
+    schema_version: '1'
+    correlation_id: corr_5e888539ea454f35be643d431c2c9390
+    idempotency_key: idem_b3
+    payload:
+      segment: smb
+      region: northeast
+      channel: selfserve
+      service: standard
+      amount: 400
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: smb_east
+  reward: 1.0
+- event:
+    event_id: evt_c1
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: c1
+    observed_at: '2026-07-27T05:20:14.356023Z'
+    schema_version: '1'
+    correlation_id: corr_9ed43b5c51174c8fb6194ab00669f800
+    idempotency_key: idem_c1
+    payload:
+      segment: public
+      region: central
+      channel: procurement
+      service: regulated
+      amount: 6000
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: public_central
+  reward: 1.0
+- event:
+    event_id: evt_c2
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: c2
+    observed_at: '2026-07-27T05:20:14.356083Z'
+    schema_version: '1'
+    correlation_id: corr_6381265697e2405a99c76004c689701f
+    idempotency_key: idem_c2
+    payload:
+      segment: government
+      region: central
+      channel: contract
+      service: regulated
+      amount: 8000
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: public_central
+  reward: 1.0
+- event:
+    event_id: evt_c3
+    source_system: source
+    source_object: record
+    event_type: upsert
+    source_record_id: c3
+    observed_at: '2026-07-27T05:20:14.356111Z'
+    schema_version: '1'
+    correlation_id: corr_239a3633510746628c0f9f24f1a1325e
+    idempotency_key: idem_c3
+    payload:
+      segment: public
+      region: midwest
+      channel: procurement
+      service: compliance
+      amount: 7200
+      active: true
+    metadata: {}
+  route_id: dispatch
+  branch_id: public_central
+  reward: 1.0

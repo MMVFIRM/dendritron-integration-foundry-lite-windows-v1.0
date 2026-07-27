@@ -1,0 +1,14 @@
+daughter_id: provisioning_daughter
+name: Provisioning Daughter
+contract_id: contract_provisioning_daughter
+capabilities:
+- capability_id: workspace.provision
+  route_ids:
+  - route_workspace.provision
+  event_types:
+  - coordinate
+  source_objects:
+  - workspace_request
+  description: ''
+enabled: true
+metadata: {}

@@ -1,0 +1,132 @@
+{
+  "additional_security_fixes": [
+    "immediate token revocation and account lifecycle",
+    "dummy-hash login timing equalization and lockout",
+    "concurrency-tested SQL token bucket",
+    "trusted immediate-proxy CIDR enforcement",
+    "production bootstrap closed by default and out-of-band token required",
+    "authenticated tenant-scoped metrics",
+    "explicit SSRF and egress-proxy boundary",
+    "v1-to-v2 migration",
+    "production fail-fast configuration validation"
+  ],
+  "artifacts": {
+    "ui_preview": {
+      "bytes": 294937,
+      "filename": "dendritron-integration-foundry-phase6.1-console.png",
+      "sha256": "9a8688bf819eb4b66481cfe23a1c5cf3f08198261dfa0a4de2051f8114821900"
+    },
+    "wheel": {
+      "bytes": 152751,
+      "filename": "dendritron_integration_foundry-0.7.1-py3-none-any.whl",
+      "sha256": "ff07a27a109775bc306917f2ce5dba0cc98275dfeb7d3f9dd2f831e0e0b3a2c2"
+    }
+  },
+  "benchmark": {
+    "claim_boundary": "not a load, penetration, multi-process, availability, or throughput benchmark",
+    "evaluation_kind": "single-process release-gate fixture",
+    "gate_pass": true,
+    "gates_passed": 22,
+    "gates_total": 22,
+    "sha256": "580e4444888480f32aa3f663ac44523f3ec2180f3dcd5196fcd641419babcee9"
+  },
+  "coverage": {
+    "cli_missed": 152,
+    "cli_percent": 56,
+    "cli_statements": 346,
+    "scope": "in-process primary CLI paths; remaining branches unclaimed"
+  },
+  "critical_findings": {
+    "audit_chain": {
+      "evidence": [
+        "monotonic per-tenant sequence",
+        "database head/count comparison",
+        "external signed directory anchor",
+        "failed login audit",
+        "concurrent append test"
+      ],
+      "status": "tail_truncation_detected"
+    },
+    "benchmark_claims": {
+      "evidence": [
+        "fixture labels on Phases 2-6",
+        "Phase 2 synthetic holdout",
+        "no performance or universal accuracy claims",
+        "Phase 6 22-gate adversarial fixture"
+      ],
+      "status": "corrected"
+    },
+    "multi_tenancy": {
+      "evidence": [
+        "platform-admin tenant lifecycle",
+        "workspace-scoped login",
+        "tenant-local email uniqueness",
+        "same email across two tenants test"
+      ],
+      "status": "reachable"
+    },
+    "production_boundary": {
+      "evidence": [
+        "production and legacy FastAPI apps split",
+        "legacy app refuses production startup",
+        "unauthenticated legacy paths absent",
+        "generic authentication dependency inspection test"
+      ],
+      "status": "closed"
+    },
+    "replica_state": {
+      "evidence": [
+        "production state moved to SQL",
+        "lease tokens and expiry checks",
+        "two-context shared-state test",
+        "no import-time SQLite creation",
+        "wheel-only container build"
+      ],
+      "status": "sql_backed"
+    },
+    "vault": {
+      "evidence": [
+        "composite tenant/ref identity",
+        "exact write row-count enforcement",
+        "versioned AES-GCM keyring",
+        "reencryption rotation test"
+      ],
+      "status": "tenant_safe_and_rotatable"
+    }
+  },
+  "generated_at": "2026-07-27T08:58:36.010920+00:00",
+  "known_boundaries": [
+    "No live PostgreSQL load, replication, failover, or multi-process throughput test was possible in this sandbox.",
+    "No external KMS/HSM, immutable WORM store, SIEM, OIDC/SAML/MFA provider, or production egress proxy was available for live validation.",
+    "No independent penetration test or jurisdiction-specific compliance certification has been performed.",
+    "Multi-region Mother consensus and authenticated remote daughter attestation remain future production layers."
+  ],
+  "phase": "6.1",
+  "release_status": "passed",
+  "review_disposition": "The adversarial review was correct; findings 1-5 were release blockers and finding 6 required benchmark correction.",
+  "static_validation": {
+    "browser_static_render": "passed",
+    "docker_compose_documents": 1,
+    "html_parse": "passed",
+    "javascript_syntax": "passed",
+    "kubernetes_platform_documents": 16,
+    "kubernetes_secret_documents": 1,
+    "production_legacy_routes_absent": "passed"
+  },
+  "test_matrix": {
+    "extracted_archive": {
+      "failed": 0,
+      "passed": 100
+    },
+    "installed_wheel": {
+      "failed": 0,
+      "passed": 100,
+      "source_tree_removed_from_import_path": true
+    },
+    "source_tree": {
+      "failed": 0,
+      "passed": 100
+    }
+  },
+  "version": "0.7.1"
+}

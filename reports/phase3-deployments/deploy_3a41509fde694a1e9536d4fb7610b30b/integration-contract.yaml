@@ -1,0 +1,88 @@
+contract_id: phase3-repair-benchmark
+version: 1.0.1
+name: Three-path repair isolation benchmark
+trigger:
+  system_id: source
+  object_type: record
+  event_type: upsert
+routes:
+- route_id: sync_customer
+  branches:
+  - branch_id: customer_owner
+    description: ''
+    conditions:
+    - path: payload.kind
+      operator: eq
+      value: customer
+    priority: 0
+    minimum_activation: 1.0
+  actions:
+  - action_id: write_customer
+    target_system_id: customer_sink
+    operation_id: write_customer
+    mappings:
+    - source: name
+      target: display_name
+      required: true
+      default: null
+      transforms: []
+    certifiers: []
+    path_parameters: {}
+    query_parameters: {}
+  abstain_on_tie: true
+- route_id: sync_invoice
+  branches:
+  - branch_id: invoice_owner
+    description: ''
+    conditions:
+    - path: payload.kind
+      operator: eq
+      value: invoice
+    priority: 0
+    minimum_activation: 1.0
+  actions:
+  - action_id: write_invoice
+    target_system_id: finance_sink
+    operation_id: write_invoice
+    mappings:
+    - source: name
+      target: invoice_name
+      required: true
+      default: null
+      transforms: []
+    certifiers: []
+    path_parameters: {}
+    query_parameters: {}
+  abstain_on_tie: true
+- route_id: sync_ticket
+  branches:
+  - branch_id: ticket_owner
+    description: ''
+    conditions:
+    - path: payload.kind
+      operator: eq
+      value: ticket
+    priority: 0
+    minimum_activation: 1.0
+  actions:
+  - action_id: write_ticket
+    target_system_id: support_sink
+    operation_id: write_ticket
+    mappings:
+    - source: name
+      target: ticket_name
+      required: true
+      default: null
+      transforms: []
+    certifiers: []
+    path_parameters: {}
+    query_parameters: {}
+  abstain_on_tie: true
+permissions:
+  customer_sink:
+  - records.write
+  finance_sink:
+  - records.write
+  support_sink:
+  - records.write
+metadata: {}

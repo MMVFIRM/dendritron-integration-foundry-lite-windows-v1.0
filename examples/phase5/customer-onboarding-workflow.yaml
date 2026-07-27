@@ -1,0 +1,84 @@
+workflow_id: customer_onboarding
+version: 1.0.0
+name: Cross-system customer onboarding
+steps:
+- step_id: identity
+  daughter_id: identity_daughter
+  capability_id: identity.create
+  source_system: nervous_fabric
+  source_object: customer
+  event_type: coordinate
+  depends_on: []
+  inputs:
+  - source: root.payload.name
+    target: name
+    required: true
+    default: null
+  - source: root.payload.email
+    target: email
+    required: true
+    default: null
+  required: true
+  execute: true
+  metadata: {}
+- step_id: analytics
+  daughter_id: analytics_daughter
+  capability_id: analytics.publish
+  source_system: nervous_fabric
+  source_object: analytics_event
+  event_type: coordinate
+  depends_on: []
+  inputs:
+  - source: root.payload.name
+    target: name
+    required: true
+    default: null
+  - source: root.payload.email
+    target: email
+    required: true
+    default: null
+  required: false
+  execute: true
+  metadata: {}
+- step_id: billing
+  daughter_id: billing_daughter
+  capability_id: billing.create
+  source_system: nervous_fabric
+  source_object: billing_request
+  event_type: coordinate
+  depends_on:
+  - identity
+  inputs:
+  - source: steps.identity.outputs.create_identity.record_id
+    target: identity_id
+    required: true
+    default: null
+  - source: root.payload.email
+    target: email
+    required: true
+    default: null
+  required: true
+  execute: true
+  metadata: {}
+- step_id: workspace
+  daughter_id: provisioning_daughter
+  capability_id: workspace.provision
+  source_system: nervous_fabric
+  source_object: workspace_request
+  event_type: coordinate
+  depends_on:
+  - identity
+  inputs:
+  - source: steps.identity.outputs.create_identity.record_id
+    target: identity_id
+    required: true
+    default: null
+  - source: root.payload.name
+    target: name
+    required: true
+    default: null
+  required: false
+  execute: true
+  metadata: {}
+compensate_on_required_failure: false
+metadata: {}

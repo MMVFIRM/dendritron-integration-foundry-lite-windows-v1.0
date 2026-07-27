@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "The Python application, desktop supervisor, wheel, UI, and Windows packaging definitions were tested in Linux. PyInstaller is not a cross-compiler, so the Windows executable and Inno Setup installer were not compiled in this environment and require the included Windows runner before public distribution.",
+  "extracted_archive_tests": {
+    "failed": 0,
+    "passed": 143,
+    "status": "passed"
+  },
+  "host": {
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "installed_wheel_tests": {
+    "failed": 0,
+    "passed": 143,
+    "source_tree_imported": false
+  },
+  "product_fixture": {
+    "gates": 11,
+    "measurement": false,
+    "passed": true
+  },
+  "release": "Dendritron Integration Foundry Lite Windows Desktop 1.0.0",
+  "source_tests": {
+    "failed": 0,
+    "passed": 143
+  },
+  "static_gates": {
+    "backup_and_integrity_tests": true,
+    "dpapi_envelope_tests": true,
+    "final_zip_integrity": true,
+    "headless_console_render": true,
+    "html_parse": true,
+    "inno_safe_per_user_defaults": true,
+    "javascript_syntax": true,
+    "pyinstaller_spec_parse": true,
+    "python_compile": true,
+    "real_desktop_health_check": true,
+    "sbom_and_checksums_configured": true,
+    "signing_order_verified": true,
+    "support_bundle_redaction_tests": true,
+    "wheel_desktop_icon_present": true,
+    "windows_ci_workflow_present": true
+  },
+  "verification_kind": "source_and_packaging_readiness",
+  "windows_artifact": {
+    "build_script": "packaging/windows/build.ps1",
+    "installer_compiled": false,
+    "reason": "Windows build host is required",
+    "workflow": ".github/workflows/windows-installer.yml"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "event_id": "evt_demo_001",
+  "source_system": "source_crm",
+  "source_object": "customer",
+  "event_type": "updated",
+  "source_record_id": "cust_1001",
+  "schema_version": "customer-v1",
+  "correlation_id": "corr_demo_001",
+  "idempotency_key": "source_crm:customer:cust_1001:v7",
+  "payload": {
+    "id": "cust_1001",
+    "customer_type": "business",
+    "company_name": "  Atlas Fabrication LLC  ",
+    "status": "ACTIVE",
+    "primary_email": "OPS@ATLAS.EXAMPLE",
+    "tags": ["industrial", "priority"]
+  },
+  "metadata": {
+    "source_sequence": 7
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "activities": 8,
+  "chat": {
+    "content": "I learned the connected systems and built \u2018When a deal is approved, create the customer in billing with company name, email, and amount\u2019. The preview produced 1 action(s). It is ready for you to review and turn on.",
+    "metadata": {
+      "connection_id": "conn_35ec032269a24b1bbd6e88a2609e23b9",
+      "preview": {
+        "actions": [
+          {
+            "action_id": "create_customer_1",
+            "request": {
+              "accepted_payload": {
+                "amount": 100,
+                "company_name": "Sample Record",
+                "email": "sample@example.com"
+              },
+              "operation_id": "create_customer",
+              "path_parameters": {},
+              "query_parameters": {},
+              "record_id": "e899fd77fd394b4a8b0daa5c1e7ef526",
+              "simulated": true,
+              "system_id": "sys_483e6ef4e6d14b988497472e91788947"
+            },
+            "status": "simulated"
+          }
+        ],
+        "explanation": "Foundry generated 1 safe preview action(s).",
+        "questions": [],
+        "sample_event": {
+          "correlation_id": "corr_4fe426e8cddd4f5fa813994e139d07e2",
+          "event_id": "evt_5d93609ee61a4acba1a7fa01737145a1",
+          "event_type": "approved",
+          "idempotency_key": "preview:compose_6b28708068d247f78bcfef6a605b30d5",
+          "metadata": {},
+          "observed_at": "2026-07-27T17:39:20.928063Z",
+          "payload": {
+            "amount": 100,
+            "company_name": "Sample Record",
+            "email": "sample@example.com",
+            "stage": "approved"
+          },
+          "schema_version": "1",
+          "source_object": "deal",
+          "source_record_id": null,
+          "source_system": "sys_79fd28a801964172b51b769cd23987da"
+        },
+        "status": "simulated"
+      },
+      "questions": []
+    },
+    "role": "assistant"
+  },
+  "claim_boundary": "Validates the Foundry Lite flow against two local mock systems. It is not a SaaS compatibility, discovery coverage, usability, throughput, or production reliability measurement.",
+  "connections": 1,
+  "evaluation_kind": "deterministic_local_product_fixture",
+  "gates": {
+    "autonomous_source_discovery": true,
+    "autonomous_target_discovery": true,
+    "background_event_execution": true,
+    "chat_created_daughter": true,
+    "daughter_bundle_written": true,
+    "enabled_without_account": true,
+    "encrypted_credentials_boundary": true,
+    "no_login_workspace": true,
+    "plain_language_preview": true,
+    "polling_baseline_is_non_destructive": true,
+    "polling_detects_live_change": true
+  },
+  "passed": true,
+  "systems": 2
+}

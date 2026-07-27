@@ -1,0 +1,95 @@
+{
+  "artifacts": {
+    "topology": {
+      "path": "reports/phase5-topology.json",
+      "verified": true
+    },
+    "wheel": {
+      "bytes": 103422,
+      "name": "dendritron_integration_foundry-0.6.0-py3-none-any.whl",
+      "sha256": "46cef4cb634e4fceca4e48ba9cbc45e7e63278e70514313ba9832256e5bd54cf"
+    }
+  },
+  "benchmark": {
+    "checks": {
+      "causal_lineage_complete": true,
+      "dependent_handoff": true,
+      "distributed_idempotency": true,
+      "exact_local_ownership": true,
+      "failed_owner_updated_locally": true,
+      "failure_attribution_is_local": true,
+      "global_policy_enforced": true,
+      "lineage_hash_bound": true,
+      "local_failure_isolated": true,
+      "multi_daughter_coordination": true,
+      "parallel_fanout": true,
+      "topology_round_trip": true,
+      "topology_tamper_detected": true,
+      "unrelated_daughters_not_failed": true,
+      "workflow_cycle_rejected": true
+    },
+    "gate_pass": true,
+    "metrics": {
+      "coordinated_steps": 4,
+      "distinct_local_contracts": 4,
+      "failed_steps": 1,
+      "global_policy_rules": 2,
+      "nervous_events_recorded": 4,
+      "registered_daughters": 4,
+      "registered_workflows": 2,
+      "successful_steps": 3
+    }
+  },
+  "boundaries": {
+    "capability_route_scope_bypassed": false,
+    "cross_daughter_compensation_implemented": false,
+    "cross_daughter_gradient": false,
+    "daughter_contracts_merged": false,
+    "daughter_tissues_shared": false,
+    "distributed_mother_consensus_implemented": false,
+    "global_policy_bypassed": false,
+    "local_certification_bypassed": false
+  },
+  "compatibility": {
+    "phase0_regression": "pass",
+    "phase1_regression": "pass",
+    "phase2_regression": "pass",
+    "phase3_regression": "pass",
+    "phase4_regression": "pass"
+  },
+  "gate_pass": true,
+  "notes": [
+    "The reference runtime is a single Mother control plane with persistent local daughter ownership.",
+    "The wheel was built with pip wheel --no-build-isolation because the build module was unavailable.",
+    "The benchmark is an architectural correctness gate, not a throughput or universal semantic-accuracy claim."
+  ],
+  "phase": 5,
+  "test_suites": {
+    "clean_release_tree": {
+      "failed": 0,
+      "passed": 70,
+      "status": "pass"
+    },
+    "extracted_final_zip": {
+      "failed": 0,
+      "passed": 70,
+      "status": "pass"
+    },
+    "extracted_zip_initial": {
+      "failed": 0,
+      "passed": 70,
+      "status": "pass"
+    },
+    "installed_wheel": {
+      "failed": 0,
+      "passed": 70,
+      "status": "pass"
+    },
+    "source_tree": {
+      "failed": 0,
+      "passed": 70,
+      "status": "pass"
+    }
+  },
+  "version": "0.6.0"
+}

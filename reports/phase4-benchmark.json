@@ -1,0 +1,54 @@
+{
+  "boundaries": {
+    "contract_certification_bypassed": false,
+    "executable_code_exported": false,
+    "payloads_exported": false,
+    "tenant_identifiers_exported": false
+  },
+  "checks": {
+    "baseline_requires_review": true,
+    "inheritance_reduces_review": true,
+    "inherited_composition_ready": true,
+    "inherited_mapping_applied": true,
+    "multi_origin_consensus": true,
+    "pack_round_trip": true,
+    "pack_tamper_detected": true,
+    "privacy_clean": true,
+    "repair_strategy_inherited": true,
+    "single_origin_poison_quarantined": true
+  },
+  "claim_boundary": "The 1-to-0 review-question change is a fixture-level gate, not a measured real-world automation rate.",
+  "evaluation_kind": "deterministic architectural inheritance fixture",
+  "gate_pass": true,
+  "inheritance_report": {
+    "applied_pattern_ids": [
+      "pattern_3bbe8138d29d42f1afb4ad347d6f19f6"
+    ],
+    "baseline_review_count": 1,
+    "decisions": [
+      {
+        "applied": true,
+        "pattern_hash": "1475145e7e851abc4895e4f5aeb27856f32776c7c1632ad4804f941ec8c5a663",
+        "pattern_id": "pattern_3bbe8138d29d42f1afb4ad347d6f19f6",
+        "reason": "eligible multi-origin pattern improved semantic evidence",
+        "score": 0.769895,
+        "target": "display_name"
+      }
+    ],
+    "eligible_pattern_count": 1,
+    "final_review_count": 0,
+    "inherited_mapping_count": 1
+  },
+  "metrics": {
+    "baseline_required_questions": 1,
+    "eligible_patterns": 2,
+    "inherited_mapping_count": 1,
+    "inherited_required_questions": 0,
+    "quarantined_patterns": 1,
+    "registered_patterns": 3,
+    "repair_advice_count": 1,
+    "semantic_pattern_support": 3
+  },
+  "pack_hash": "68fc28c144d5988559d9a203b12d1d2555c3ae455d00e75e12512fc0d2247223",
+  "phase": 4
+}

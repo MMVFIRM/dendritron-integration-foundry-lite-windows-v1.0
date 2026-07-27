@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Dendritron Foundry Lite</title>
+  <link rel="stylesheet" href="/lite-static/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">D</div>
+        <div><strong>Foundry Lite</strong><span>Local integration studio</span></div>
+      </div>
+      <nav id="nav">
+        <button class="nav-item active" data-view="create"><span>✦</span>Create</button>
+        <button class="nav-item" data-view="systems"><span>◫</span>Systems</button>
+        <button class="nav-item" data-view="connections"><span>⌁</span>Connections</button>
+        <button class="nav-item" data-view="activity"><span>◷</span>Activity</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Settings</button>
+      </nav>
+      <div class="privacy-card">
+        <span class="status-dot"></span>
+        <div><strong>Local and private</strong><small>No account. Bound to this computer.</small></div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <h1 id="page-title">Create a connection</h1>
+          <p id="page-subtitle">Tell Foundry what your systems should do together.</p>
+        </div>
+        <div class="summary-pills">
+          <span><b id="system-count">0</b> systems</span>
+          <span><b id="connection-count">0</b> connections</span>
+          <span class="local-pill">● Local</span>
+        </div>
+      </header>
+
+      <section id="view-create" class="view active">
+        <div id="first-run-card" class="welcome-card hidden">
+          <div class="welcome-icon">✦</div>
+          <div><h2>Welcome to Foundry Lite</h2><p>Connect two systems, enter the credentials they require, and describe the result you want. Foundry learns the schemas and builds the connection.</p></div>
+          <button class="primary" id="welcome-connect">Connect your first system</button>
+        </div>
+        <div class="create-layout">
+          <div class="chat-panel card">
+            <div class="chat-head">
+              <div><h2>What should your systems do?</h2><p>Foundry uses the live schemas it discovered.</p></div>
+              <button class="secondary" id="clear-chat">New task</button>
+            </div>
+            <div class="system-picker">
+              <label>When something happens in
+                <select id="source-system"><option value="">Choose a source</option></select>
+              </label>
+              <span class="arrow">→</span>
+              <label>Do something in
+                <select id="target-system" multiple></select>
+              </label>
+            </div>
+            <div id="chat-thread" class="chat-thread">
+              <div class="message assistant">
+                <div class="avatar">D</div>
+                <div class="bubble">
+                  <strong>Describe the outcome in plain English.</strong>
+                  <p>For example: “When a deal is approved, create the customer in billing and notify our team if it fails.”</p>
+                </div>
+              </div>
+            </div>
+            <form id="chat-form" class="composer">
+              <textarea id="chat-input" rows="3" placeholder="When this happens, do this..."></textarea>
+              <button type="submit" class="primary">Build connection <span>↗</span></button>
+            </form>
+          </div>
+
+          <aside class="preview-panel card">
+            <div class="panel-head"><h2>Build preview</h2><span id="preview-badge" class="badge muted">Waiting</span></div>
+            <div id="preview-empty" class="empty-state">
+              <div class="empty-icon">⌁</div>
+              <h3>Your daughter will appear here</h3>
+              <p>Foundry will select the trigger, map fields, generate a safe test, and show exactly what will happen.</p>
+            </div>
+            <div id="preview-content" class="hidden"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="view-systems" class="view">
+        <div class="section-actions">
+          <div><h2>Connected systems</h2><p>Foundry learns each system automatically after you authorize access.</p></div>
+          <button class="primary" id="add-system">+ Connect a system</button>
+        </div>
+        <div id="systems-grid" class="grid"></div>
+      </section>
+
+      <section id="view-connections" class="view">
+        <div class="section-actions">
+          <div><h2>Your connections</h2><p>Each connection is an independent Dendritron daughter with its own health and history.</p></div>
+          <button class="primary" data-go-create>+ New connection</button>
+        </div>
+        <div id="connections-list" class="connection-list"></div>
+      </section>
+
+      <section id="view-activity" class="view">
+        <div class="section-actions"><div><h2>Activity</h2><p>A plain-language record of discovery, builds, runs, retries, and failures.</p></div><button class="secondary" id="refresh-activity">Refresh</button></div>
+        <div id="activity-list" class="activity-list card"></div>
+      </section>
+      <section id="view-settings" class="view">
+        <div class="section-actions"><div><h2>Settings and recovery</h2><p>Foundry is preconfigured for this Windows user and stores its data locally.</p></div></div>
+        <div class="settings-grid">
+          <article class="card settings-card"><h3>Desktop app</h3><div id="desktop-status" class="settings-list"></div><label class="check-row"><input type="checkbox" id="startup-toggle"> Start Foundry Lite when I sign in to Windows</label></article>
+          <article class="card settings-card"><h3>Backups</h3><p>Foundry creates rolling local backups and keeps credentials encrypted inside them.</p><div class="button-row"><button class="primary" id="create-backup">Create backup now</button><button class="secondary" id="open-data-folder">Open data folder</button></div></article>
+          <article class="card settings-card"><h3>Support</h3><p>Create a redacted diagnostics bundle. It excludes credentials, webhook tokens, and event payloads.</p><button class="secondary" id="download-support">Download support bundle</button></article>
+          <article class="card settings-card"><h3>Security</h3><ul><li>Localhost-only by default</li><li>Windows DPAPI protects the vault key</li><li>AES-256-GCM encrypts connected-system credentials</li><li>No login or cloud account required</li></ul></article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="system-dialog">
+    <form method="dialog" id="system-form">
+      <div class="dialog-head"><div><h2>Connect a system</h2><p>Give Foundry access. It will discover the schema itself.</p></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+      <label>System or app<input id="system-name" required list="system-catalog" autocomplete="off" placeholder="HubSpot, QuickBooks, Slack, internal system..."><datalist id="system-catalog"></datalist></label>
+      <label>System URL<input id="system-url" required type="url" placeholder="Foundry fills this for known systems"></label><p id="catalog-note" class="field-note"></p>
+      <label>How do you authorize access?
+        <select id="auth-kind"><option value="none">No authentication</option><option value="api_key">API key</option><option value="bearer">Bearer token</option><option value="basic">Username and password</option></select>
+      </label>
+      <div id="credential-fields"></div>
+      <div class="notice"><b>What Foundry does:</b> checks standard schema endpoints, GraphQL introspection, OData metadata, capability indexes, then safe read-only responses. It will not perform destructive discovery actions.</div>
+      <div class="dialog-actions"><button class="secondary" value="cancel">Cancel</button><button type="submit" class="primary" value="default">Connect and learn</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast"></div>
+  <script src="/lite-static/app.js" defer></script>
+</body>
+</html>

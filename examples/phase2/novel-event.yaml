@@ -1,0 +1,17 @@
+event_id: evt_n1
+source_system: source
+source_object: record
+event_type: upsert
+source_record_id: n1
+observed_at: '2026-07-27T05:20:14.365503Z'
+schema_version: '1'
+correlation_id: corr_37a535b99f8445c9b37db670a0e0e193
+idempotency_key: idem_n1
+payload:
+  segment: research
+  region: orbital
+  channel: telemetry
+  service: experimental
+  amount: 42
+  active: true
+metadata: {}

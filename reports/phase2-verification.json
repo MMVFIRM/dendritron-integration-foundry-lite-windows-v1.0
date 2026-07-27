@@ -1,0 +1,61 @@
+{
+  "benchmark": {
+    "baseline_accuracy": 0.3333333333333333,
+    "branch_scoped_adaptation": {
+      "changed_branches": [
+        "smb_east"
+      ],
+      "pass": true
+    },
+    "damage_isolation": {
+      "pass": true
+    },
+    "dendritron_accuracy": 1.0,
+    "gate_pass": true,
+    "known_case_count": 6,
+    "mean_active_specialist_fraction": 0.25,
+    "novelty_abstention_rate": 1.0,
+    "novelty_case_count": 2,
+    "persistence": {
+      "path": "reports/phase2-benchmark.tissue.json",
+      "round_trip": true
+    }
+  },
+  "non_claims": [
+    "The packaged benchmark is synthetic and does not prove universal routing superiority.",
+    "Phase 2 does not autonomously repair contracts or deploy into production.",
+    "External-system correctness still depends on discovered contracts, test evidence, and policy approval."
+  ],
+  "release": "Dendritron Integration Foundry Phase 2",
+  "verification": {
+    "cli_known_event": {
+      "router_kind": "dendritron_tissue",
+      "selected_branch": "smb_east",
+      "status": "simulated"
+    },
+    "cli_novel_event": {
+      "reason": "Novel event: best specialist similarity 0.5278 is below threshold",
+      "selected_branch": null,
+      "status": "abstained"
+    },
+    "compileall": true,
+    "generated_bundle_manifest_verification": true,
+    "installed_wheel_test_suite": {
+      "failed": 0,
+      "passed": 33
+    },
+    "phase1_discovery_composition_regression": true,
+    "source_test_suite": {
+      "failed": 0,
+      "passed": 33
+    }
+  },
+  "version": "0.3.0",
+  "wheel": {
+    "build_isolation": false,
+    "filename": "dendritron_integration_foundry-0.3.0-py3-none-any.whl",
+    "installed_benchmark_gate_pass": true,
+    "reason": "Offline verification environment; existing installed build backend was used.",
+    "sha256": "6264b63eae226f0502fb61437e2642ff1100863c1dcb8a5e0a750e869c1c8405"
+  }
+}

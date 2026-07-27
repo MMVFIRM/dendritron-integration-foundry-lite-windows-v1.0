@@ -1,0 +1,10 @@
+{
+  "dendritron-tissue.json": "51ccef36b63efa272026d2e87819d3226d7857cc122350ef60ce26831b7b50d5",
+  "deployment.json": "bb19b145e56d2d3cd9e2bbdc8f8c24db75cd74c166a10faff0238ed36438d934",
+  "integration-contract.yaml": "18bb662e35a057cb697b845b21c1f55ff2960ccfdbd79df6cb49cf089cd3854a",
+  "profiles/customer_sink.yaml": "f54a8fefb61f4f5e2599354155358e8e4c90ff8512253b87f0ac11b7ca3e8b6f",
+  "profiles/finance_sink.yaml": "c608c2c3ac9b011922e3d858f86201bf55487887205f7d983f317140a68d83a0",
+  "profiles/source.yaml": "ad0a6c5a5140bb05ccc4b02440c091aef76f61d4dbe58ef15f2e89bc262f780b",
+  "profiles/support_sink.yaml": "4f64724a30bc1892e0b4cd58a2073ab91d8cf12c9591a67ceddb1df9abcc4e0d",
+  "repair-candidate.json": "78f7bbfbbeba5591c82742f2b3e416d5116fc947ed36e7be8e4e66572e8e7f82"
+}

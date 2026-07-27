@@ -1,0 +1,22 @@
+daughter_id: analytics_daughter
+name: Analytics Daughter
+contract_id: contract_analytics_daughter
+capabilities:
+- capability_id: analytics.publish
+  route_ids:
+  - route_analytics.publish
+  event_types:
+  - coordinate
+  source_objects:
+  - analytics_event
+  description: ''
+- capability_id: sensitive.export
+  route_ids:
+  - route_analytics.publish
+  event_types:
+  - coordinate
+  source_objects:
+  - analytics_event
+  description: ''
+enabled: true
+metadata: {}

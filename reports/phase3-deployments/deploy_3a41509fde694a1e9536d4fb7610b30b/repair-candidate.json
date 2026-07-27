@@ -1,0 +1,127 @@
+{
+  "repair_id": "repair_f21c5308e3214639bb379874ffbd984d",
+  "drift_id": "drift_c672493f99344dd48d50f8f36e334b49",
+  "contract_id": "phase3-repair-benchmark",
+  "base_contract_version": "1.0.0",
+  "proposed_contract_version": "1.0.1",
+  "route_id": "sync_customer",
+  "branch_id": "customer_owner",
+  "ownership_key": "phase3-repair-benchmark:sync_customer:customer_owner",
+  "risk": "low",
+  "summary": "Rename mapped target field 'customer_name' to 'display_name' for write_customer",
+  "patches": [
+    {
+      "artifact": "contract",
+      "operation": "replace",
+      "path": "/routes/0/actions/0/mappings/0/target",
+      "value": "display_name",
+      "reason": "Target field changed from customer_name to display_name"
+    },
+    {
+      "artifact": "profile:customer_sink",
+      "operation": "replace",
+      "path": "/operations/0/request_schema",
+      "value": {
+        "type": "object",
+        "properties": {
+          "display_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "display_name"
+        ],
+        "additionalProperties": false
+      },
+      "reason": "Bind the local System Profile to the observed request contract"
+    }
+  ],
+  "affected_artifacts": [
+    "contract",
+    "profile:customer_sink"
+  ],
+  "expected_scope": [
+    "phase3-repair-benchmark:sync_customer:customer_owner",
+    "write_customer"
+  ],
+  "rollback_patches": [
+    {
+      "artifact": "profile:customer_sink",
+      "operation": "replace",
+      "path": "/operations/0/request_schema",
+      "value": {
+        "type": "object",
+        "properties": {
+          "customer_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "customer_name"
+        ],
+        "additionalProperties": false
+      },
+      "reason": "Restore previous value"
+    },
+    {
+      "artifact": "contract",
+      "operation": "replace",
+      "path": "/routes/0/actions/0/mappings/0/target",
+      "value": "customer_name",
+      "reason": "Restore previous value"
+    }
+  ],
+  "status": "signed",
+  "approval": {
+    "status": "approved",
+    "approver": "policy:low-risk",
+    "reason": "All Phase 3 verification gates passed",
+    "approved_at": "2026-07-27T08:41:00.211085Z"
+  },
+  "verification": {
+    "report_id": "repair_verify_bec156d9ac0f4e418aa629b1fa9ee515",
+    "repair_id": "repair_f21c5308e3214639bb379874ffbd984d",
+    "passed": true,
+    "impacted_events": 1,
+    "unrelated_events": 2,
+    "cases": [
+      {
+        "name": "impacted_historical_replay",
+        "passed": true,
+        "details": "1 impacted events replayed"
+      },
+      {
+        "name": "unrelated_path_regression",
+        "passed": true,
+        "details": "2 unrelated events preserved their plan fingerprints"
+      },
+      {
+        "name": "unrelated_tissue_isolation",
+        "passed": true,
+        "details": "No unrelated branch state changed during repair verification"
+      },
+      {
+        "name": "repaired_contract_validation",
+        "passed": true,
+        "details": "Repaired contract is structurally valid"
+      }
+    ],
+    "before_owner_hash": "6d71b6e4fee9593c60acda8564b77462243f65a2e54173e0cd879e77d4c794d2",
+    "after_owner_hash": "6d71b6e4fee9593c60acda8564b77462243f65a2e54173e0cd879e77d4c794d2",
+    "unrelated_branch_hashes_unchanged": true,
+    "generated_at": "2026-07-27T08:41:00.210892Z"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "key_id": "benchmark",
+    "signed_payload_hash": "a60ccea721366e9d34fedf5eff65595f29b961da284024f1cbe7be1f83024b07",
+    "digest": "7bc7db0535917223660abc6042f6fa22138a3c0ac821314f8383486ad5e21260",
+    "signed_at": "2026-07-27T08:41:00.211344Z"
+  },
+  "candidate_hash": "01ea0e2701ea39d8a903352ac9577b8083b10d80e20807d8279ded7e911adc21",
+  "created_at": "2026-07-27T08:41:00.194263Z",
+  "metadata": {
+    "failure_signature": "failure:4825a4ab1f70fde5ec9a",
+    "repair_type": "field_renamed"
+  }
+}

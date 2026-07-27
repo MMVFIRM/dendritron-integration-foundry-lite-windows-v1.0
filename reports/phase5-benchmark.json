@@ -1,0 +1,508 @@
+{
+  "boundaries": {
+    "central_payload_reinterpretation": false,
+    "cross_daughter_gradient": false,
+    "daughter_contracts_merged": false,
+    "daughter_tissues_shared": false,
+    "global_policy_bypassed": false
+  },
+  "checks": {
+    "causal_lineage_complete": true,
+    "dependent_handoff": true,
+    "distributed_idempotency": true,
+    "exact_local_ownership": true,
+    "failed_owner_updated_locally": true,
+    "failure_attribution_is_local": true,
+    "global_policy_enforced": true,
+    "lineage_hash_bound": true,
+    "local_failure_isolated": true,
+    "multi_daughter_coordination": true,
+    "parallel_fanout": true,
+    "topology_round_trip": true,
+    "topology_tamper_detected": true,
+    "unrelated_daughters_not_failed": true,
+    "workflow_cycle_rejected": true
+  },
+  "claim_boundary": "Architectural correctness fixture only; not throughput, scale, availability, or universal coordination evidence.",
+  "coordination": {
+    "completed_at": "2026-07-27T08:42:03.941144Z",
+    "coordination_id": "coord_407ac33ce3104108b18b8e76ab9316ca",
+    "correlation_id": "corr_phase5_customer",
+    "lineage_hash": "197d05dde21b070bb575a2f216b35f25bb1dc80d952ced3dfcce6d004773e13c",
+    "root_event_id": "evt_phase5_customer",
+    "started_at": "2026-07-27T08:42:03.911725Z",
+    "status": "partial",
+    "steps": [
+      {
+        "behavior_hash": "8b0bc34f881de2fd9d5d669cfdadc044943935a346a0a693340668d584d831eb",
+        "capability_id": "analytics.publish",
+        "completed_at": "2026-07-27T08:42:03.918693Z",
+        "daughter_id": "analytics_daughter",
+        "error": null,
+        "local_contract_id": "contract_analytics_daughter",
+        "local_contract_version": "1.0.0",
+        "local_event_id": "evt_phase5_customer:customer_onboarding:analytics",
+        "nervous_event_id": "nev_cedbff51be2049c484d53e47d4c1876c",
+        "ownership_keys": [
+          "contract_analytics_daughter:route_analytics.publish:branch_analytics.publish"
+        ],
+        "policy_decision": {
+          "allowed": true,
+          "approval_required": false,
+          "reason": "Matched global policy rule allow-owned-capabilities",
+          "rule_id": "allow-owned-capabilities"
+        },
+        "response": {
+          "action_outputs": {
+            "publish_customer_event": {
+              "accepted_payload": {
+                "email": "customer@example.invalid",
+                "name": "Example Customer"
+              },
+              "operation_id": "publish_customer_event",
+              "path_parameters": {},
+              "query_parameters": {},
+              "record_id": "0bf531733e6c47ad8163df0e27c14c98",
+              "simulated": false,
+              "system_id": "analytics_platform"
+            }
+          },
+          "hop_count": 1,
+          "local_status": "succeeded"
+        },
+        "started_at": "2026-07-27T08:42:03.914710Z",
+        "status": "succeeded",
+        "step_id": "analytics"
+      },
+      {
+        "behavior_hash": "b68cdb06d8e6726ac95ae2aa5a4a4491b9aac91dd7a2ea1f1e9ca250e71eef43",
+        "capability_id": "identity.create",
+        "completed_at": "2026-07-27T08:42:03.926205Z",
+        "daughter_id": "identity_daughter",
+        "error": null,
+        "local_contract_id": "contract_identity_daughter",
+        "local_contract_version": "1.0.0",
+        "local_event_id": "evt_phase5_customer:customer_onboarding:identity",
+        "nervous_event_id": "nev_356b34ba2b8645f081316c592368dfc9",
+        "ownership_keys": [
+          "contract_identity_daughter:route_identity.create:branch_identity.create"
+        ],
+        "policy_decision": {
+          "allowed": true,
+          "approval_required": false,
+          "reason": "Matched global policy rule allow-owned-capabilities",
+          "rule_id": "allow-owned-capabilities"
+        },
+        "response": {
+          "action_outputs": {
+            "create_identity": {
+              "accepted_payload": {
+                "email": "customer@example.invalid",
+                "name": "Example Customer"
+              },
+              "operation_id": "create_identity",
+              "path_parameters": {},
+              "query_parameters": {},
+              "record_id": "ecc4f5701a934d23b05d303ef597e71b",
+              "simulated": false,
+              "system_id": "identity_platform"
+            }
+          },
+          "hop_count": 1,
+          "local_status": "succeeded"
+        },
+        "started_at": "2026-07-27T08:42:03.924169Z",
+        "status": "succeeded",
+        "step_id": "identity"
+      },
+      {
+        "behavior_hash": "43a387465661dceb46de0e8bc4212f240f73eea955d851e434796a139531bea3",
+        "capability_id": "billing.create",
+        "completed_at": "2026-07-27T08:42:03.935052Z",
+        "daughter_id": "billing_daughter",
+        "error": null,
+        "local_contract_id": "contract_billing_daughter",
+        "local_contract_version": "1.0.0",
+        "local_event_id": "evt_phase5_customer:customer_onboarding:billing",
+        "nervous_event_id": "nev_8557241cf4ac42b7848996c06b19f38f",
+        "ownership_keys": [
+          "contract_billing_daughter:route_billing.create:branch_billing.create"
+        ],
+        "policy_decision": {
+          "allowed": true,
+          "approval_required": false,
+          "reason": "Matched global policy rule allow-owned-capabilities",
+          "rule_id": "allow-owned-capabilities"
+        },
+        "response": {
+          "action_outputs": {
+            "create_billing_account": {
+              "accepted_payload": {
+                "email": "customer@example.invalid",
+                "identity_id": "ecc4f5701a934d23b05d303ef597e71b"
+              },
+              "operation_id": "create_billing_account",
+              "path_parameters": {},
+              "query_parameters": {},
+              "record_id": "277d7d5ae29c4d4f94b1cf0cb72209fd",
+              "simulated": false,
+              "system_id": "billing_platform"
+            }
+          },
+          "hop_count": 2,
+          "local_status": "succeeded"
+        },
+        "started_at": "2026-07-27T08:42:03.932591Z",
+        "status": "succeeded",
+        "step_id": "billing"
+      },
+      {
+        "behavior_hash": "7bf2f88dd029e40dfaf4c2784a34dd6069b1653fc45fbc0affc2cb871cb3ac32",
+        "capability_id": "workspace.provision",
+        "completed_at": "2026-07-27T08:42:03.940919Z",
+        "daughter_id": "provisioning_daughter",
+        "error": "simulated target outage",
+        "local_contract_id": "contract_provisioning_daughter",
+        "local_contract_version": "1.0.0",
+        "local_event_id": "evt_phase5_customer:customer_onboarding:workspace",
+        "nervous_event_id": "nev_9ebf0da736234d2c897ba057cf73afa4",
+        "ownership_keys": [
+          "contract_provisioning_daughter:route_workspace.provision:branch_workspace.provision"
+        ],
+        "policy_decision": {
+          "allowed": true,
+          "approval_required": false,
+          "reason": "Matched global policy rule allow-owned-capabilities",
+          "rule_id": "allow-owned-capabilities"
+        },
+        "response": {
+          "action_outputs": {},
+          "hop_count": 2,
+          "local_status": "failed"
+        },
+        "started_at": "2026-07-27T08:42:03.939181Z",
+        "status": "failed",
+        "step_id": "workspace"
+      }
+    ],
+    "workflow_id": "customer_onboarding",
+    "workflow_version": "1.0.0"
+  },
+  "evaluation_kind": "deterministic four-daughter coordination fixture",
+  "gate_pass": true,
+  "metrics": {
+    "coordinated_steps": 4,
+    "distinct_local_contracts": 4,
+    "failed_steps": 1,
+    "global_policy_rules": 2,
+    "nervous_events_recorded": 4,
+    "registered_daughters": 4,
+    "registered_workflows": 2,
+    "successful_steps": 3
+  },
+  "phase": 5,
+  "topology": {
+    "daughters": [
+      {
+        "capabilities": [
+          {
+            "capability_id": "analytics.publish",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_analytics.publish"
+            ],
+            "source_objects": [
+              "analytics_event"
+            ]
+          },
+          {
+            "capability_id": "sensitive.export",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_analytics.publish"
+            ],
+            "source_objects": [
+              "analytics_event"
+            ]
+          }
+        ],
+        "contract_id": "contract_analytics_daughter",
+        "daughter_id": "analytics_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "faf7a90536299386226b635a43926fb967c92a283845c11eba5ba95f60ba7f51",
+          "contract_version": "1.0.0",
+          "tissue_hash": "6c6b9be06f6bbcb14364676115bea40102e57f85cf607bb15dd413a30a6f4a94",
+          "tissue_id": "tissue_4240328ba7d6458f8559ca8adbe288b4",
+          "tissue_version": 1
+        },
+        "name": "Analytics Daughter"
+      },
+      {
+        "capabilities": [
+          {
+            "capability_id": "billing.create",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_billing.create"
+            ],
+            "source_objects": [
+              "billing_request"
+            ]
+          }
+        ],
+        "contract_id": "contract_billing_daughter",
+        "daughter_id": "billing_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "bd374c6ede401c3143154f25f7be9586a049811a0758c12d244f8f96a3afcbeb",
+          "contract_version": "1.0.0",
+          "tissue_hash": "5571015b85548a3837d0ba62b3725ca09cfdfe2d4814ec1465fca9023eb45966",
+          "tissue_id": "tissue_e87e6bffd0704f1dacf24f5df987e990",
+          "tissue_version": 1
+        },
+        "name": "Billing Daughter"
+      },
+      {
+        "capabilities": [
+          {
+            "capability_id": "identity.create",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_identity.create"
+            ],
+            "source_objects": [
+              "customer"
+            ]
+          }
+        ],
+        "contract_id": "contract_identity_daughter",
+        "daughter_id": "identity_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "dbf4ce02aef2beae2e362043bbcc52c5eef05f3517bd60e13516295ac4e5feee",
+          "contract_version": "1.0.0",
+          "tissue_hash": "7f6d7be8aecf6cd48d19a953da68746a8f3536052808d84c521c0bfe3e049ae5",
+          "tissue_id": "tissue_d089528cd67944f2b60861abf6611c29",
+          "tissue_version": 1
+        },
+        "name": "Identity Daughter"
+      },
+      {
+        "capabilities": [
+          {
+            "capability_id": "workspace.provision",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_workspace.provision"
+            ],
+            "source_objects": [
+              "workspace_request"
+            ]
+          }
+        ],
+        "contract_id": "contract_provisioning_daughter",
+        "daughter_id": "provisioning_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "3261f5ba04eaf4d7a4964c1b971cf6026db61d237ad1e2a36c101e5052d4e651",
+          "contract_version": "1.0.0",
+          "tissue_hash": "c6708bb1dfd817f9966e21ff51a35b1b8833ce83cb1bc181f36e89a0a749db76",
+          "tissue_id": "tissue_b88b4d1b85104f479d23cc7f25f21a73",
+          "tissue_version": 1
+        },
+        "name": "Provisioning Daughter"
+      }
+    ],
+    "format": "difoundry-nervous-topology-v1",
+    "policy": {
+      "default_effect": "deny",
+      "maximum_fanout": 8,
+      "maximum_hops": 8,
+      "policy_id": "phase5-benchmark-policy",
+      "require_registered_capability": true,
+      "rules": [
+        {
+          "capability_id": "*",
+          "effect": "allow",
+          "event_type": "coordinate",
+          "metadata_equals": {},
+          "priority": 10,
+          "reason": "",
+          "rule_id": "allow-owned-capabilities",
+          "source_daughter_id": "*",
+          "target_daughter_id": "*"
+        },
+        {
+          "capability_id": "sensitive.export",
+          "effect": "deny",
+          "event_type": "*",
+          "metadata_equals": {},
+          "priority": 100,
+          "reason": "Sensitive export is forbidden by global policy",
+          "rule_id": "deny-sensitive-export",
+          "source_daughter_id": "*",
+          "target_daughter_id": "*"
+        }
+      ],
+      "version": "1"
+    },
+    "topology_hash": "23cb801afb848bde8bada215c24acbd420320890e6e5c6f34df18ddb75aae49f",
+    "workflows": [
+      {
+        "compensate_on_required_failure": false,
+        "metadata": {},
+        "name": "Cross-system customer onboarding",
+        "steps": [
+          {
+            "capability_id": "identity.create",
+            "daughter_id": "identity_daughter",
+            "depends_on": [],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.name",
+                "target": "name"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.email",
+                "target": "email"
+              }
+            ],
+            "metadata": {},
+            "required": true,
+            "source_object": "customer",
+            "source_system": "nervous_fabric",
+            "step_id": "identity"
+          },
+          {
+            "capability_id": "analytics.publish",
+            "daughter_id": "analytics_daughter",
+            "depends_on": [],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.name",
+                "target": "name"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.email",
+                "target": "email"
+              }
+            ],
+            "metadata": {},
+            "required": false,
+            "source_object": "analytics_event",
+            "source_system": "nervous_fabric",
+            "step_id": "analytics"
+          },
+          {
+            "capability_id": "billing.create",
+            "daughter_id": "billing_daughter",
+            "depends_on": [
+              "identity"
+            ],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "steps.identity.outputs.create_identity.record_id",
+                "target": "identity_id"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.email",
+                "target": "email"
+              }
+            ],
+            "metadata": {},
+            "required": true,
+            "source_object": "billing_request",
+            "source_system": "nervous_fabric",
+            "step_id": "billing"
+          },
+          {
+            "capability_id": "workspace.provision",
+            "daughter_id": "provisioning_daughter",
+            "depends_on": [
+              "identity"
+            ],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "steps.identity.outputs.create_identity.record_id",
+                "target": "identity_id"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.name",
+                "target": "name"
+              }
+            ],
+            "metadata": {},
+            "required": false,
+            "source_object": "workspace_request",
+            "source_system": "nervous_fabric",
+            "step_id": "workspace"
+          }
+        ],
+        "version": "1.0.0",
+        "workflow_id": "customer_onboarding"
+      },
+      {
+        "compensate_on_required_failure": false,
+        "metadata": {},
+        "name": "Forbidden export",
+        "steps": [
+          {
+            "capability_id": "sensitive.export",
+            "daughter_id": "analytics_daughter",
+            "depends_on": [],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [],
+            "metadata": {},
+            "required": true,
+            "source_object": "analytics_event",
+            "source_system": "nervous_fabric",
+            "step_id": "export"
+          }
+        ],
+        "version": "1",
+        "workflow_id": "forbidden_export"
+      }
+    ]
+  }
+}

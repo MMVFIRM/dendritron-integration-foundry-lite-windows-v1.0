@@ -1,0 +1,86 @@
+contract_id: crm-customer-to-erp-account
+version: "1"
+name: Generic CRM customer to ERP account
+trigger:
+  system_id: source_crm
+  object_type: customer
+  event_type: "*"
+permissions:
+  target_erp: [accounts.write]
+  analytics_lake: [snapshots.append]
+routes:
+  - route_id: customer_upsert
+    abstain_on_tie: true
+    branches:
+      - branch_id: business_customer
+        description: Owns active business customers
+        priority: 10
+        conditions:
+          - path: payload.customer_type
+            operator: eq
+            value: business
+          - path: payload.status
+            operator: in
+            value: [ACTIVE, PENDING]
+      - branch_id: individual_customer
+        description: Owns individual customers
+        priority: 5
+        conditions:
+          - path: payload.customer_type
+            operator: eq
+            value: individual
+    actions:
+      - action_id: upsert_target_account
+        target_system_id: target_erp
+        operation_id: upsert_account
+        mappings:
+          - source: id
+            target: external_id
+            required: true
+          - source: company_name
+            target: legal_name
+            required: true
+            transforms: [strip]
+          - source: status
+            target: account_status
+            required: true
+            transforms: [lower]
+          - source: primary_email
+            target: contacts.primary.email
+            required: false
+            transforms: [strip, lower]
+          - source: tags
+            target: metadata.tags
+            required: false
+            default: []
+        certifiers:
+          - kind: required_fields
+            config:
+              fields: [external_id, legal_name, account_status]
+          - kind: allowed_values
+            config:
+              path: account_status
+              values: [active, pending]
+          - kind: permission
+            config: {}
+      - action_id: append_customer_snapshot
+        target_system_id: analytics_lake
+        operation_id: append_customer_snapshot
+        mappings:
+          - source: id
+            target: customer_key
+            required: true
+          - source: company_name
+            target: display_name
+            required: true
+            transforms: [strip]
+          - source: status
+            target: lifecycle
+            required: true
+            transforms: [lower]
+        certifiers:
+          - kind: required_fields
+            config:
+              fields: [customer_key, display_name, lifecycle]
+          - kind: permission
+            config: {}

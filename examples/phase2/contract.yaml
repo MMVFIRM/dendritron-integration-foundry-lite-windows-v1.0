@@ -1,0 +1,52 @@
+contract_id: phase2-routing-benchmark
+version: '1'
+name: Protocol-neutral routing benchmark
+trigger:
+  system_id: source
+  object_type: record
+  event_type: upsert
+routes:
+- route_id: dispatch
+  branches:
+  - branch_id: enterprise_west
+    description: ''
+    conditions:
+    - path: event.event_type
+      operator: eq
+      value: upsert
+    priority: 3
+    minimum_activation: 1.0
+  - branch_id: smb_east
+    description: ''
+    conditions:
+    - path: event.event_type
+      operator: eq
+      value: upsert
+    priority: 2
+    minimum_activation: 1.0
+  - branch_id: public_central
+    description: ''
+    conditions:
+    - path: event.event_type
+      operator: eq
+      value: upsert
+    priority: 1
+    minimum_activation: 1.0
+  actions:
+  - action_id: write_record
+    target_system_id: sink
+    operation_id: write
+    mappings:
+    - source: segment
+      target: segment
+      required: true
+      default: null
+      transforms: []
+    certifiers: []
+    path_parameters: {}
+    query_parameters: {}
+  abstain_on_tie: false
+permissions:
+  sink:
+  - records.write
+metadata: {}

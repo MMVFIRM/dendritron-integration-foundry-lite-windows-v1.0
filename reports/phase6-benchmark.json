@@ -1,0 +1,47 @@
+{
+  "boundaries": {
+    "chat": "Deterministic provider-neutral planner; external model gateway may augment but not bypass verification",
+    "database": "SQLAlchemy-backed; thread-safe shared-memory SQLite development fixture, PostgreSQL production target",
+    "identity": "Built-in Argon2id and signed tokens; external OIDC/SAML adapter remains a production extension",
+    "secrets": "AES-256-GCM reference provider; production KMS/HSM key custody required"
+  },
+  "claim_boundary": "Small deterministic functional/adversarial fixture only; not a load, penetration, multi-process, availability, or throughput benchmark.",
+  "evaluation_kind": "single-process release-gate fixture",
+  "gate_pass": true,
+  "gates": {
+    "audit_chain_valid": true,
+    "audit_tail_truncation_detected": true,
+    "bootstrap_authentication": true,
+    "chat_intent_capture": true,
+    "connection_monitoring": true,
+    "daughter_composed": true,
+    "durable_job_queued": true,
+    "encrypted_secret_storage": true,
+    "health_job_execution": true,
+    "immediate_token_revocation": true,
+    "metrics_export": true,
+    "metrics_require_authentication": true,
+    "operator_console_served": true,
+    "production_legacy_routes_absent": true,
+    "same_email_across_tenants": true,
+    "second_tenant_reachable": true,
+    "security_headers": true,
+    "signed_token_access": true,
+    "single_claim_lease": true,
+    "system_discovery": true,
+    "vault_key_rotation": true,
+    "worker_claim_and_execution": true
+  },
+  "measurements": {
+    "audit_events": 10,
+    "chat_messages": 5,
+    "connection_status": "healthy",
+    "connections": 1,
+    "harness_runtime_seconds": 0.3532,
+    "health_score": 1.0,
+    "systems": 2,
+    "tenants": 2
+  },
+  "phase": 6,
+  "version": "0.7.2"
+}

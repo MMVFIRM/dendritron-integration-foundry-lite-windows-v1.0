@@ -1,0 +1,22 @@
+system_id: target_erp
+name: Example Target ERP
+version: "1"
+protocol: rest
+base_url: https://target.example.invalid/api
+operations:
+  - operation_id: upsert_account
+    method: POST
+    path: /accounts
+    description: Create or update an account
+    required_permissions: [accounts.write]
+    idempotency_supported: true
+    request_schema:
+      type: object
+      required: [external_id, legal_name, account_status]
+      properties:
+        external_id:
+          type: string
+        legal_name:
+          type: string
+        account_status:
+          type: string

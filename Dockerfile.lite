@@ -1,0 +1,26 @@
+FROM python:3.12-slim AS builder
+ENV PIP_NO_CACHE_DIR=1
+WORKDIR /build
+COPY pyproject.toml README.md LICENSE ./
+COPY src ./src
+RUN python -m pip install --upgrade pip build && python -m build --wheel --outdir /wheel
+
+FROM python:3.12-slim AS runtime
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    DIFOUNDRY_LITE_HOST=0.0.0.0 \
+    DIFOUNDRY_LITE_PORT=8765 \
+    DIFOUNDRY_LITE_ALLOW_LAN=true \
+    DIFOUNDRY_LITE_OPEN_BROWSER=false \
+    DIFOUNDRY_LITE_DATA_DIR=/data
+WORKDIR /app
+RUN groupadd --system foundry && useradd --system --gid foundry --home-dir /app foundry && mkdir /data && chown foundry:foundry /data
+COPY --from=builder /wheel/*.whl /tmp/
+RUN python -m pip install --upgrade pip && python -m pip install /tmp/*.whl && rm -f /tmp/*.whl
+USER foundry
+EXPOSE 8765
+VOLUME ["/data"]
+HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/lite/liveness', timeout=2)"
+CMD ["difoundry-lite"]

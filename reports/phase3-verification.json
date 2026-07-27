@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "source_zip": {
+      "filename": "dendritron-integration-foundry-phase3.zip",
+      "integrity_test": "pass"
+    },
+    "wheel": {
+      "bytes": 78192,
+      "filename": "dendritron_integration_foundry-0.4.0-py3-none-any.whl",
+      "sha256": "2b565e7dd9bc355e7e89e41331fe4c50bb745281b234c6cc8ae52d35a1224ce5"
+    }
+  },
+  "benchmark_gate_pass": true,
+  "benchmark_gates": {
+    "drift_detection": true,
+    "failure_locality": true,
+    "quarantine_recovery": true,
+    "recovery": true,
+    "repair_verification": true,
+    "signature_verification": true,
+    "unrelated_paths_operational": true
+  },
+  "cli_benchmark": {
+    "source": "pass",
+    "wheel": "pass",
+    "zip": "pass"
+  },
+  "generated_at": "2026-07-27T05:46:57.833482+00:00",
+  "integrity": {
+    "daughter_bundle_manifest": "pass",
+    "repair_store_tamper_detection": "pass",
+    "signature_tamper_detection": "pass",
+    "tissue_state_hash": "pass",
+    "wheel_install": "pass",
+    "zip_integrity": "pass"
+  },
+  "notes": [
+    "The Phase 3 benchmark is synthetic and validates implemented architecture properties.",
+    "HMAC-SHA256 is a portable reference signer; production deployments should use a KMS or HSM-backed signer.",
+    "Structured bounded repair is implemented; arbitrary undocumented semantic changes are not claimed to be automatically repairable."
+  ],
+  "release": "Dendritron Integration Foundry Phase 3",
+  "source_tests": {
+    "failed": 0,
+    "passed": 48,
+    "status": "pass"
+  },
+  "version": "0.4.0",
+  "wheel_tests": {
+    "failed": 0,
+    "passed": 48,
+    "status": "pass"
+  },
+  "zip_extracted_tests": {
+    "failed": 0,
+    "passed": 48,
+    "status": "pass"
+  }
+}

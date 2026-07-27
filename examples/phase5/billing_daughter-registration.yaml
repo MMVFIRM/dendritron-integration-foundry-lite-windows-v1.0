@@ -1,0 +1,14 @@
+daughter_id: billing_daughter
+name: Billing Daughter
+contract_id: contract_billing_daughter
+capabilities:
+- capability_id: billing.create
+  route_ids:
+  - route_billing.create
+  event_types:
+  - coordinate
+  source_objects:
+  - billing_request
+  description: ''
+enabled: true
+metadata: {}

@@ -1,0 +1,14 @@
+daughter_id: identity_daughter
+name: Identity Daughter
+contract_id: contract_identity_daughter
+capabilities:
+- capability_id: identity.create
+  route_ids:
+  - route_identity.create
+  event_types:
+  - coordinate
+  source_objects:
+  - customer
+  description: ''
+enabled: true
+metadata: {}

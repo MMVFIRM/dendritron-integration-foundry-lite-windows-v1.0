@@ -1,0 +1,28 @@
+kind: schema
+event_id: evt_customer_drift
+contract_id: phase3-repair-benchmark
+contract_version: 1.0.0
+action_id: write_customer
+target_system_id: customer_sink
+operation_id: write_customer
+route_id: sync_customer
+branch_id: customer_owner
+ownership_key: phase3-repair-benchmark:sync_customer:customer_owner
+specialist_ids: []
+failure_signature: failure:example
+error: "required field 'display_name' is missing; 'customer_name' is no longer accepted"
+expected: {}
+observed: {}
+evidence:
+  kind: schema
+  repair_type: field_renamed
+  old_field: customer_name
+  new_field: display_name
+  observed_request_schema:
+    type: object
+    properties:
+      display_name:
+        type: string
+    required:
+      - display_name
+    additionalProperties: false

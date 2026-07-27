@@ -1,0 +1,95 @@
+{
+  "adversarial_regressions": {
+    "concurrent_bad_guess_lockout": "pass",
+    "correct_password_race_against_new_lock": "pass",
+    "development_bootstrap_ready_and_usable": "pass",
+    "expired_completion_lease_does_not_exit_worker": "pass",
+    "expired_failure_lease_does_not_exit_worker": "pass",
+    "live_uvicorn_default_database": {
+      "concurrent_logins": 24,
+      "http_200": 24,
+      "pass": true
+    },
+    "lockout_threshold_plus_one": "pass",
+    "long_running_job_heartbeat": "pass",
+    "production_docs_openapi_redoc_disabled": "pass",
+    "unknown_user_argon2_equalization": "pass",
+    "worker_sigterm_exit_code_zero": "pass"
+  },
+  "claim_boundary": "Release correctness and adversarial regression evidence only. This is not PostgreSQL load/failover, penetration, availability, or real-world integration-accuracy evidence.",
+  "generated_at": "2026-07-27T15:45:42.613417+00:00",
+  "phase2_fixture": {
+    "all_categorical_values_in_every_branch": true,
+    "ambiguous_abstention_rate": 1.0,
+    "best_single_field_accuracy": 0.3333333333333333,
+    "categorical_tuple_lookup_accuracy": 0.7555555555555555,
+    "claim_boundary": "architectural routing fixture with overlapping multi-field families; not a real-world integration accuracy estimate, throughput study, or evidence of Dendritron superiority over trained statistical baselines",
+    "coordinate_corruption_probability": 0.35,
+    "dendritron_coverage": 0.8916666666666667,
+    "dendritron_holdout_accuracy": 0.8916666666666667,
+    "dendritron_selective_accuracy": 1.0,
+    "evaluation_kind": "deterministic synthetic overlapping holdout",
+    "gate_pass": true,
+    "holdout_cases": 360,
+    "novelty_abstention_rate": 1.0,
+    "static_priority_accuracy": 0.3333333333333333,
+    "training_cases": 18
+  },
+  "phase6_fixture": {
+    "claim_boundary": "Small deterministic functional/adversarial fixture only; not a load, penetration, multi-process, availability, or throughput benchmark.",
+    "evaluation_kind": "single-process release-gate fixture",
+    "gate_pass": true,
+    "gates_passed": 22,
+    "gates_total": 22
+  },
+  "release": "Phase 6.2 reliability hardening",
+  "remaining_boundaries": [
+    "Live PostgreSQL multi-process load, failover, and recovery testing",
+    "KMS/HSM-backed key custody and rotation",
+    "Immutable WORM/SIEM audit anchoring in a deployed environment",
+    "OIDC/SAML/MFA",
+    "Production egress-proxy and DNS-rebinding tests",
+    "Independent penetration testing",
+    "Multi-region control-plane consensus and remote daughter attestation"
+  ],
+  "static_and_deployment_checks": {
+    "docker_compose_documents": 1,
+    "html_parse": "pass",
+    "javascript_syntax": "pass",
+    "kubernetes_platform_documents": 16,
+    "kubernetes_secret_documents": 1,
+    "production_worker_heartbeat_seconds": 20,
+    "production_worker_lease_seconds": 60,
+    "production_worker_termination_grace_seconds": 120,
+    "python_compileall": "pass"
+  },
+  "test_results": {
+    "clean_release_directory": {
+      "duration_seconds": 19.36,
+      "failed": 0,
+      "passed": 111
+    },
+    "cli_statement_coverage_percent": 56,
+    "final_zip_extracted": {
+      "duration_seconds": 19.35,
+      "failed": 0,
+      "passed": 111
+    },
+    "installed_wheel_without_source_tree": {
+      "duration_seconds": 19.26,
+      "failed": 0,
+      "passed": 111
+    },
+    "source_tree": {
+      "duration_seconds": 18.94,
+      "failed": 0,
+      "passed": 111
+    }
+  },
+  "version": "0.7.2",
+  "wheel": {
+    "filename": "dendritron_integration_foundry-0.7.2-py3-none-any.whl",
+    "sha256": "f520d077e9cb178744c660e2c783b708381e8311866a653876219792ba6e158a",
+    "size_bytes": 157539
+  }
+}

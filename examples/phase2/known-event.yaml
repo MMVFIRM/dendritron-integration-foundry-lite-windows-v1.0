@@ -1,0 +1,17 @@
+event_id: evt_tb1
+source_system: source
+source_object: record
+event_type: upsert
+source_record_id: tb1
+observed_at: '2026-07-27T05:20:14.364560Z'
+schema_version: '1'
+correlation_id: corr_5e20f1e2445442dd896967bb322ee853
+idempotency_key: idem_tb1
+payload:
+  segment: smb
+  region: east
+  channel: web
+  service: starter
+  amount: 180
+  active: true
+metadata: {}

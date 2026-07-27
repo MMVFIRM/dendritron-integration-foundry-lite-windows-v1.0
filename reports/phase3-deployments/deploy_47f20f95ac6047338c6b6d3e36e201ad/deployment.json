@@ -1,0 +1,17 @@
+{
+  "deployment_id": "deploy_47f20f95ac6047338c6b6d3e36e201ad",
+  "repair_id": "repair_73694308978d4d0ca15712bf5babe13b",
+  "contract_id": "phase3-repair-benchmark",
+  "previous_version": "1.0.0",
+  "deployed_version": "1.0.1",
+  "contract_hash": "8b832da9d4139d52141deb0c81cfae96bc8c4c7fc6b4bc61dee94b21f2a61942",
+  "profile_hashes": {
+    "source": "58062eda148411bdfabc0ec49d1ec1053d3d95adf394b1e8fd4b18d851a8c5d0",
+    "customer_sink": "ab826f9f05bba864a0b57d8bcb7771a7e77fbc7f498a661cead2fd3f43eebb25",
+    "finance_sink": "d9081b977fcbfc94bbd70a06e4522174b0a4bca133ea3258d67a17f8b938c92b",
+    "support_sink": "f19708d100d54b63b537eb6fe6330d449195db14d7bc1c8cea3345e46794fce9"
+  },
+  "tissue_hash": "7c59fbb1d75462d0abbeffa0af1057a5d7c543e8c6ed6f075295f9600e009169",
+  "deployed_at": "2026-07-27T08:41:59.516720Z",
+  "artifact_dir": null
+}

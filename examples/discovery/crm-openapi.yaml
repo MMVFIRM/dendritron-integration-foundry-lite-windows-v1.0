@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: Atlas CRM
+  version: 2026.1
+servers:
+  - url: https://crm.example.invalid/api
+components:
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://crm.example.invalid/oauth/token
+          scopes:
+            customers.read: Read customers
+  schemas:
+    Customer:
+      type: object
+      required: [id, company_name, status]
+      properties:
+        id:
+          type: string
+          description: Stable customer identifier
+        company_name:
+          type: string
+          description: Legal or display name of the company
+        status:
+          type: string
+          enum: [ACTIVE, PENDING, CLOSED]
+        primary_email:
+          type: string
+          format: email
+        updated_at:
+          type: string
+          format: date-time
+security:
+  - OAuth: [customers.read]
+paths:
+  /customers/{customer_id}:
+    get:
+      operationId: getCustomer
+      tags: [Customers]
+      parameters:
+        - in: path
+          name: customer_id
+          required: true
+          schema: {type: string}
+      responses:
+        "200":
+          description: Customer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'

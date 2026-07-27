@@ -1,0 +1,25 @@
+policy_id: phase5-benchmark-policy
+version: '1'
+default_effect: deny
+rules:
+- rule_id: allow-owned-capabilities
+  effect: allow
+  source_daughter_id: '*'
+  target_daughter_id: '*'
+  capability_id: '*'
+  event_type: coordinate
+  metadata_equals: {}
+  reason: ''
+  priority: 10
+- rule_id: deny-sensitive-export
+  effect: deny
+  source_daughter_id: '*'
+  target_daughter_id: '*'
+  capability_id: sensitive.export
+  event_type: '*'
+  metadata_equals: {}
+  reason: Sensitive export is forbidden by global policy
+  priority: 100
+maximum_hops: 8
+maximum_fanout: 8
+require_registered_capability: true

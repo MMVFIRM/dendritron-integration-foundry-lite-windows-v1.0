@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dendritron Integration Foundry</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div id="authShell" class="auth-shell">
+    <section class="auth-brand">
+      <div class="brand-mark">D</div>
+      <p class="eyebrow">DENDRITRON INTEGRATION FOUNDRY</p>
+      <h1>Make every system<br>part of one nervous system.</h1>
+      <p>Discover unfamiliar software, build exact daughter integrations, and monitor every route, policy, repair, and causal event.</p>
+      <div class="signal-map" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+    <section class="auth-panel">
+      <form id="authForm" class="auth-card">
+        <div class="auth-mode">
+          <button type="button" data-mode="login" class="active">Sign in</button>
+          <button type="button" data-mode="bootstrap">Create platform</button>
+        </div>
+        <div id="workspaceField" class="field">
+          <label for="workspaceSlug">Workspace</label>
+          <input id="workspaceSlug" autocomplete="organization" required placeholder="mmv-firm">
+        </div>
+        <div id="tenantField" class="field hidden">
+          <label for="tenantName">Organization</label>
+          <input id="tenantName" autocomplete="organization" placeholder="MMV Firm">
+        </div>
+        <div id="bootstrapTokenField" class="field hidden">
+          <label for="bootstrapToken">Bootstrap token</label>
+          <input id="bootstrapToken" type="password" autocomplete="one-time-code" placeholder="Out-of-band deployment secret">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="username" required placeholder="admin@company.com">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" minlength="12" required placeholder="At least 12 characters">
+        </div>
+        <p id="authError" class="error"></p>
+        <button class="primary wide" type="submit">Enter Foundry</button>
+        <p class="fineprint">Credentials are encrypted at rest. Production deployments require externally supplied signing and vault keys.</p>
+      </form>
+    </section>
+  </div>
+
+  <div id="appShell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><div class="brand-mark small">D</div><div><strong>Foundry</strong><span>Control Plane</span></div></div>
+      <nav id="nav">
+        <button data-view="overview" class="active"><i>◫</i>Overview</button>
+        <button data-view="chat"><i>✦</i>Build with chat</button>
+        <button data-view="systems"><i>◇</i>Systems</button>
+        <button data-view="connections"><i>⇄</i>Connections</button>
+        <button data-view="activity"><i>⌁</i>Activity</button>
+        <button data-view="security"><i>⌾</i>Security</button>
+        <button id="adminNav" data-view="administration" class="hidden"><i>⚙</i>Administration</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="status-dot"><span></span>Control plane online</div>
+        <button id="logoutButton" class="text-button">Sign out</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div><p class="eyebrow" id="viewEyebrow">OPERATIONS</p><h2 id="viewTitle">Overview</h2></div>
+        <div class="top-actions"><button id="refreshButton" class="secondary">Refresh</button><button id="addSystemButton" class="primary">+ Add system</button><div id="userChip" class="user-chip"></div></div>
+      </header>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <dialog id="systemDialog">
+    <form id="systemForm" method="dialog" class="modal-card">
+      <div class="modal-head"><div><p class="eyebrow">SYSTEM DISCOVERY</p><h3>Add a system</h3></div><button type="button" class="icon-button" data-close>×</button></div>
+      <div class="form-grid">
+        <div class="field"><label>Name</label><input name="name" required placeholder="Your CRM"></div>
+        <div class="field"><label>Protocol</label><select name="protocol"><option>rest</option><option>graphql</option><option>asyncapi</option><option>sql</option><option>json_schema</option><option>custom</option></select></div>
+        <div class="field"><label>Discovery format</label><select name="discovery_format"><option value="">No specification yet</option><option value="openapi">OpenAPI</option><option value="asyncapi">AsyncAPI</option><option value="graphql">GraphQL introspection</option><option value="sql">SQL DDL</option><option value="json_schema">JSON Schema</option><option value="system_profile">Native System Profile</option></select></div>
+        <div class="field"><label>Base URL</label><input name="base_url" type="url" placeholder="https://api.example.com"></div>
+      </div>
+      <div class="field"><label>Description</label><textarea name="description" rows="2" placeholder="What this system owns"></textarea></div>
+      <div class="field"><label>Specification</label><textarea name="specification" rows="8" spellcheck="false" placeholder="Paste JSON, YAML, GraphQL introspection, or SQL DDL"></textarea></div>
+      <div class="form-grid">
+        <div class="field"><label>Credential type</label><select name="credential_kind"><option value="none">None</option><option value="api_key">API key</option><option value="oauth2">OAuth 2.0</option><option value="basic">Basic auth</option><option value="custom">Custom</option></select></div>
+        <div class="field"><label>Credential values</label><input name="credentials" placeholder='{"token":"..."}' autocomplete="off"></div>
+      </div>
+      <p id="systemError" class="error"></p>
+      <div class="modal-actions"><button type="button" class="secondary" data-close>Cancel</button><button class="primary" type="submit">Discover system</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast"></div>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

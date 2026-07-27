@@ -1,0 +1,23 @@
+services:
+  foundry-lite:
+    build:
+      context: .
+      dockerfile: Dockerfile.lite
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8765:8765"
+    volumes:
+      - foundry-lite-data:/data
+    environment:
+      DIFOUNDRY_LITE_HOST: 0.0.0.0
+      DIFOUNDRY_LITE_PORT: 8765
+      DIFOUNDRY_LITE_ALLOW_LAN: "true"
+      DIFOUNDRY_LITE_OPEN_BROWSER: "false"
+      DIFOUNDRY_LITE_DATA_DIR: /data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+volumes:
+  foundry-lite-data:

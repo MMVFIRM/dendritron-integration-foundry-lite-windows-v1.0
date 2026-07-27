@@ -1,0 +1,10 @@
+system_id: source_crm
+name: Example Source CRM
+version: "1"
+protocol: rest
+base_url: https://source.example.invalid/api
+operations:
+  - operation_id: get_customer
+    method: GET
+    path: /customers/{customer_id}
+    required_permissions: [customers.read]

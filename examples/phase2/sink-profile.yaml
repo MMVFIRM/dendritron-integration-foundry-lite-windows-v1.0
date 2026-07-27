@@ -1,0 +1,31 @@
+system_id: sink
+name: Generic Sink
+version: '1'
+protocol: custom
+base_url: null
+authentication:
+  kind: none
+  secret_refs: {}
+  config: {}
+operations:
+- operation_id: write
+  method: WRITE
+  path: records
+  description: ''
+  object_id: null
+  operation_kind: create
+  request_schema:
+    type: object
+    properties:
+      segment:
+        type: string
+    required:
+    - segment
+  response_schema: {}
+  required_permissions:
+  - records.write
+  idempotency_supported: false
+  timeout_seconds: 30.0
+  metadata: {}
+objects: []
+metadata: {}

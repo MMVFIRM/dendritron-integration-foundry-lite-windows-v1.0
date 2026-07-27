@@ -1,0 +1,238 @@
+{
+  "benchmark": "phase3-bounded-self-repair",
+  "candidate": {
+    "candidate_hash": "091d1850b33f19fdfd09b80b01f6b9b5ebc02287db9aef7bfdf8bd62025a0c62",
+    "patch_count": 2,
+    "repair_id": "repair_73694308978d4d0ca15712bf5babe13b",
+    "risk": "low",
+    "status": "deployed"
+  },
+  "claim_boundary": "Functional repair-gate fixture only; not a measured autonomous repair success rate across real vendor systems.",
+  "deployment": {
+    "artifact_dir": "phase3-deployments/deploy_47f20f95ac6047338c6b6d3e36e201ad",
+    "contract_hash": "8b832da9d4139d52141deb0c81cfae96bc8c4c7fc6b4bc61dee94b21f2a61942",
+    "contract_id": "phase3-repair-benchmark",
+    "deployed_at": "2026-07-27T08:41:59.516720Z",
+    "deployed_version": "1.0.1",
+    "deployment_id": "deploy_47f20f95ac6047338c6b6d3e36e201ad",
+    "previous_version": "1.0.0",
+    "profile_hashes": {
+      "customer_sink": "ab826f9f05bba864a0b57d8bcb7771a7e77fbc7f498a661cead2fd3f43eebb25",
+      "finance_sink": "d9081b977fcbfc94bbd70a06e4522174b0a4bca133ea3258d67a17f8b938c92b",
+      "source": "58062eda148411bdfabc0ec49d1ec1053d3d95adf394b1e8fd4b18d851a8c5d0",
+      "support_sink": "f19708d100d54b63b537eb6fe6330d449195db14d7bc1c8cea3345e46794fce9"
+    },
+    "repair_id": "repair_73694308978d4d0ca15712bf5babe13b",
+    "tissue_hash": "7c59fbb1d75462d0abbeffa0af1057a5d7c543e8c6ed6f075295f9600e009169"
+  },
+  "drift_detection": {
+    "failure_signature": "failure:4825a4ab1f70fde5ec9a",
+    "kind": "schema",
+    "ownership_key": "phase3-repair-benchmark:sync_customer:customer_owner",
+    "pass": true
+  },
+  "evaluation_kind": "deterministic injected-drift architecture fixture",
+  "failure_locality": {
+    "pass": true
+  },
+  "gate_pass": true,
+  "quarantine": {
+    "after_recovery": 0,
+    "before_repair": 1,
+    "pass": true
+  },
+  "recovery": {
+    "pass": true,
+    "results": [
+      {
+        "event_id": "evt_customer_drift:recovery:9ad54b2d",
+        "executions": [
+          {
+            "action_id": "write_customer",
+            "error": null,
+            "response": {
+              "accepted_payload": {
+                "display_name": "Customer drift"
+              },
+              "operation_id": "write_customer",
+              "path_parameters": {},
+              "query_parameters": {},
+              "record_id": "3e24aef3ef4347949ade6cc94bcb4299",
+              "simulated": false,
+              "system_id": "customer_sink"
+            },
+            "status": "succeeded"
+          }
+        ],
+        "message": "",
+        "plan": {
+          "actions": [
+            {
+              "action_id": "write_customer",
+              "branch_id": "customer_owner",
+              "certifications": [
+                {
+                  "details": "request payload satisfies operation schema",
+                  "kind": "request_schema",
+                  "passed": true,
+                  "required": true
+                },
+                {
+                  "details": "permission scope satisfied",
+                  "kind": "permission",
+                  "passed": true,
+                  "required": true
+                }
+              ],
+              "operation_id": "write_customer",
+              "ownership_key": "phase3-repair-benchmark:sync_customer:customer_owner",
+              "path_parameters": {},
+              "payload": {
+                "display_name": "Customer drift"
+              },
+              "query_parameters": {},
+              "route_id": "sync_customer",
+              "specialist_ids": [
+                "specialist_33a04ee1410e"
+              ],
+              "target_system_id": "customer_sink"
+            }
+          ],
+          "behavior_hash": "ffd309522396022d0d8a623399b0c35d0e225664a1aad0bf4692c06603464dd3",
+          "contract_id": "phase3-repair-benchmark",
+          "contract_version": "1.0.1",
+          "created_at": "2026-07-27T08:41:59.534235Z",
+          "event_id": "evt_customer_drift:recovery:9ad54b2d",
+          "plan_hash": "9911996631133d92f5c96dea551aecea49e0fd82330b9818cc5e808236bbf9dd",
+          "plan_id": "plan_32a5d43de4d247e2a248c2457b083145",
+          "route_traces": [
+            {
+              "abstained": false,
+              "branch_activations": {
+                "customer_owner": 0.76
+              },
+              "diagnostics": {
+                "branches": {
+                  "customer_owner": {
+                    "active_specialists": [
+                      "specialist_33a04ee1410e"
+                    ],
+                    "eligible": true,
+                    "hard_activation": 1.0,
+                    "learned_activation": 0.6,
+                    "specialist_count": 1
+                  }
+                },
+                "sparse_activation": {
+                  "active": 1,
+                  "available": 1
+                }
+              },
+              "novelty_score": 0.4,
+              "ownership_key": "phase3-repair-benchmark:sync_customer:customer_owner",
+              "reason": null,
+              "route_id": "sync_customer",
+              "router_kind": "dendritron_tissue",
+              "selected_branch_id": "customer_owner",
+              "selected_specialist_ids": [
+                "specialist_33a04ee1410e"
+              ],
+              "tissue_version": 8
+            },
+            {
+              "abstained": true,
+              "branch_activations": {
+                "invoice_owner": 0.0
+              },
+              "diagnostics": {
+                "branches": {
+                  "invoice_owner": {
+                    "active_specialists": [],
+                    "eligible": false,
+                    "hard_activation": 0.0,
+                    "learned_activation": 0.0,
+                    "specialist_count": 1
+                  }
+                }
+              },
+              "novelty_score": 1.0,
+              "ownership_key": null,
+              "reason": "No branch satisfied its hard contract gate",
+              "route_id": "sync_invoice",
+              "router_kind": "dendritron_tissue",
+              "selected_branch_id": null,
+              "selected_specialist_ids": [],
+              "tissue_version": 8
+            },
+            {
+              "abstained": true,
+              "branch_activations": {
+                "ticket_owner": 0.0
+              },
+              "diagnostics": {
+                "branches": {
+                  "ticket_owner": {
+                    "active_specialists": [],
+                    "eligible": false,
+                    "hard_activation": 0.0,
+                    "learned_activation": 0.0,
+                    "specialist_count": 1
+                  }
+                }
+              },
+              "novelty_score": 1.0,
+              "ownership_key": null,
+              "reason": "No branch satisfied its hard contract gate",
+              "route_id": "sync_ticket",
+              "router_kind": "dendritron_tissue",
+              "selected_branch_id": null,
+              "selected_specialist_ids": [],
+              "tissue_version": 8
+            }
+          ]
+        },
+        "status": "succeeded"
+      }
+    ]
+  },
+  "signature": {
+    "key_id": "benchmark",
+    "valid": true
+  },
+  "unrelated_paths_operational": {
+    "pass": true
+  },
+  "verification": {
+    "after_owner_hash": "3397e5258d979e7e6cf1dcf6371626e84d2ed48b22ddf8ecb80acba5daf6e395",
+    "before_owner_hash": "3397e5258d979e7e6cf1dcf6371626e84d2ed48b22ddf8ecb80acba5daf6e395",
+    "cases": [
+      {
+        "details": "1 impacted events replayed",
+        "name": "impacted_historical_replay",
+        "passed": true
+      },
+      {
+        "details": "2 unrelated events preserved their plan fingerprints",
+        "name": "unrelated_path_regression",
+        "passed": true
+      },
+      {
+        "details": "No unrelated branch state changed during repair verification",
+        "name": "unrelated_tissue_isolation",
+        "passed": true
+      },
+      {
+        "details": "Repaired contract is structurally valid",
+        "name": "repaired_contract_validation",
+        "passed": true
+      }
+    ],
+    "generated_at": "2026-07-27T08:41:59.514884Z",
+    "impacted_events": 1,
+    "passed": true,
+    "repair_id": "repair_73694308978d4d0ca15712bf5babe13b",
+    "report_id": "repair_verify_1e572e595436490a92d67fbcb8edb207",
+    "unrelated_branch_hashes_unchanged": true,
+    "unrelated_events": 2
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "bundle": {
+    "daughters": [
+      {
+        "capabilities": [
+          {
+            "capability_id": "analytics.publish",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_analytics.publish"
+            ],
+            "source_objects": [
+              "analytics_event"
+            ]
+          },
+          {
+            "capability_id": "sensitive.export",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_analytics.publish"
+            ],
+            "source_objects": [
+              "analytics_event"
+            ]
+          }
+        ],
+        "contract_id": "contract_analytics_daughter",
+        "daughter_id": "analytics_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "faf7a90536299386226b635a43926fb967c92a283845c11eba5ba95f60ba7f51",
+          "contract_version": "1.0.0",
+          "tissue_hash": "1aa6b40d121805b0d1027bafecbabaefef53b5690391587cc3bf6d9c49f3412b",
+          "tissue_id": "tissue_f680c1a59d574df0a7295ed8e4cfd040",
+          "tissue_version": 0
+        },
+        "name": "Analytics Daughter"
+      },
+      {
+        "capabilities": [
+          {
+            "capability_id": "billing.create",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_billing.create"
+            ],
+            "source_objects": [
+              "billing_request"
+            ]
+          }
+        ],
+        "contract_id": "contract_billing_daughter",
+        "daughter_id": "billing_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "bd374c6ede401c3143154f25f7be9586a049811a0758c12d244f8f96a3afcbeb",
+          "contract_version": "1.0.0",
+          "tissue_hash": "c3e9525ce4fbbba101a3decf660f676ad6393a214f24dbbc7f5c75704d6ade8e",
+          "tissue_id": "tissue_41f9a9e6d8744049a7bd39da8a1d39e3",
+          "tissue_version": 0
+        },
+        "name": "Billing Daughter"
+      },
+      {
+        "capabilities": [
+          {
+            "capability_id": "identity.create",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_identity.create"
+            ],
+            "source_objects": [
+              "customer"
+            ]
+          }
+        ],
+        "contract_id": "contract_identity_daughter",
+        "daughter_id": "identity_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "dbf4ce02aef2beae2e362043bbcc52c5eef05f3517bd60e13516295ac4e5feee",
+          "contract_version": "1.0.0",
+          "tissue_hash": "eec552d3010c00add4f2019de3e29ab34a31cc62a46caf6de795225700bbba54",
+          "tissue_id": "tissue_4aec9d9e3f00481cb8a2ee4fd1e94913",
+          "tissue_version": 0
+        },
+        "name": "Identity Daughter"
+      },
+      {
+        "capabilities": [
+          {
+            "capability_id": "workspace.provision",
+            "description": "",
+            "event_types": [
+              "coordinate"
+            ],
+            "route_ids": [
+              "route_workspace.provision"
+            ],
+            "source_objects": [
+              "workspace_request"
+            ]
+          }
+        ],
+        "contract_id": "contract_provisioning_daughter",
+        "daughter_id": "provisioning_daughter",
+        "enabled": true,
+        "metadata": {
+          "contract_hash": "3261f5ba04eaf4d7a4964c1b971cf6026db61d237ad1e2a36c101e5052d4e651",
+          "contract_version": "1.0.0",
+          "tissue_hash": "67069edf2f6d0222287fafa71860b5625e100d86a9c9bdf3312e4ff012f1c927",
+          "tissue_id": "tissue_3bb21682eb144899900e097b7edf44fe",
+          "tissue_version": 0
+        },
+        "name": "Provisioning Daughter"
+      }
+    ],
+    "format": "difoundry-nervous-topology-v1",
+    "policy": {
+      "default_effect": "deny",
+      "maximum_fanout": 8,
+      "maximum_hops": 8,
+      "policy_id": "phase5-benchmark-policy",
+      "require_registered_capability": true,
+      "rules": [
+        {
+          "capability_id": "*",
+          "effect": "allow",
+          "event_type": "coordinate",
+          "metadata_equals": {},
+          "priority": 10,
+          "reason": "",
+          "rule_id": "allow-owned-capabilities",
+          "source_daughter_id": "*",
+          "target_daughter_id": "*"
+        },
+        {
+          "capability_id": "sensitive.export",
+          "effect": "deny",
+          "event_type": "*",
+          "metadata_equals": {},
+          "priority": 100,
+          "reason": "Sensitive export is forbidden by global policy",
+          "rule_id": "deny-sensitive-export",
+          "source_daughter_id": "*",
+          "target_daughter_id": "*"
+        }
+      ],
+      "version": "1"
+    },
+    "topology_hash": "411fe6d654b246e2a28e0c9b3ce0b6b95ae63975001e231f598e6efe805640ad",
+    "workflows": [
+      {
+        "compensate_on_required_failure": false,
+        "metadata": {},
+        "name": "Cross-system customer onboarding",
+        "steps": [
+          {
+            "capability_id": "identity.create",
+            "daughter_id": "identity_daughter",
+            "depends_on": [],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.name",
+                "target": "name"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.email",
+                "target": "email"
+              }
+            ],
+            "metadata": {},
+            "required": true,
+            "source_object": "customer",
+            "source_system": "nervous_fabric",
+            "step_id": "identity"
+          },
+          {
+            "capability_id": "analytics.publish",
+            "daughter_id": "analytics_daughter",
+            "depends_on": [],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.name",
+                "target": "name"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.email",
+                "target": "email"
+              }
+            ],
+            "metadata": {},
+            "required": false,
+            "source_object": "analytics_event",
+            "source_system": "nervous_fabric",
+            "step_id": "analytics"
+          },
+          {
+            "capability_id": "billing.create",
+            "daughter_id": "billing_daughter",
+            "depends_on": [
+              "identity"
+            ],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "steps.identity.outputs.create_identity.record_id",
+                "target": "identity_id"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.email",
+                "target": "email"
+              }
+            ],
+            "metadata": {},
+            "required": true,
+            "source_object": "billing_request",
+            "source_system": "nervous_fabric",
+            "step_id": "billing"
+          },
+          {
+            "capability_id": "workspace.provision",
+            "daughter_id": "provisioning_daughter",
+            "depends_on": [
+              "identity"
+            ],
+            "event_type": "coordinate",
+            "execute": true,
+            "inputs": [
+              {
+                "default": null,
+                "required": true,
+                "source": "steps.identity.outputs.create_identity.record_id",
+                "target": "identity_id"
+              },
+              {
+                "default": null,
+                "required": true,
+                "source": "root.payload.name",
+                "target": "name"
+              }
+            ],
+            "metadata": {},
+            "required": false,
+            "source_object": "workspace_request",
+            "source_system": "nervous_fabric",
+            "step_id": "workspace"
+          }
+        ],
+        "version": "1.0.0",
+        "workflow_id": "customer_onboarding"
+      }
+    ]
+  },
+  "bundle_hash": "9d71873afba7bac63182009d8a40ba2cb04448ac2ef9754c950fc8495850c8cf",
+  "format": "difoundry-nervous-topology-envelope-v1"
+}

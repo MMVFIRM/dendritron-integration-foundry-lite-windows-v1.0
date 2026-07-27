@@ -1,0 +1,20 @@
+{
+  "event_id": "evt_phase1_demo",
+  "source_system": "atlas_crm",
+  "source_object": "customer",
+  "event_type": "updated",
+  "source_record_id": "cust_1001",
+  "schema_version": "customer-v1",
+  "correlation_id": "corr_phase1_demo",
+  "idempotency_key": "atlas_crm:customer:cust_1001:v7",
+  "payload": {
+    "id": "cust_1001",
+    "company_name": "Atlas Fabrication LLC",
+    "status": "ACTIVE",
+    "primary_email": "ops@atlas.example",
+    "updated_at": "2026-07-26T18:00:00-07:00"
+  },
+  "metadata": {
+    "source_sequence": 7
+  }
+}

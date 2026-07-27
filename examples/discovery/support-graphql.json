@@ -1,0 +1,48 @@
+{
+  "data": {
+    "__schema": {
+      "queryType": {"name": "Query"},
+      "mutationType": {"name": "Mutation"},
+      "subscriptionType": null,
+      "types": [
+        {
+          "kind": "OBJECT",
+          "name": "Query",
+          "fields": [
+            {
+              "name": "ticket",
+              "description": "Read one support ticket",
+              "args": [{"name": "id", "type": {"kind": "NON_NULL", "ofType": {"kind": "SCALAR", "name": "ID"}}}],
+              "type": {"kind": "OBJECT", "name": "Ticket"}
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "Mutation",
+          "fields": [
+            {
+              "name": "createTicket",
+              "description": "Create a support ticket",
+              "args": [
+                {"name": "external_id", "type": {"kind": "NON_NULL", "ofType": {"kind": "SCALAR", "name": "ID"}}},
+                {"name": "title", "type": {"kind": "NON_NULL", "ofType": {"kind": "SCALAR", "name": "String"}}}
+              ],
+              "type": {"kind": "OBJECT", "name": "Ticket"}
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "Ticket",
+          "description": "Support ticket",
+          "fields": [
+            {"name": "id", "type": {"kind": "NON_NULL", "ofType": {"kind": "SCALAR", "name": "ID"}}},
+            {"name": "title", "type": {"kind": "SCALAR", "name": "String"}},
+            {"name": "status", "type": {"kind": "SCALAR", "name": "String"}}
+          ]
+        }
+      ]
+    }
+  }
+}

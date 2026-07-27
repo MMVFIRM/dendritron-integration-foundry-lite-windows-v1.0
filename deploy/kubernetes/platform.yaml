@@ -1,0 +1,247 @@
+apiVersion: v1
+kind: Namespace
+metadata: {name: difoundry}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: difoundry-config, namespace: difoundry}
+data:
+  DIFOUNDRY_ENV: production
+  DIFOUNDRY_TOKEN_ISSUER: difoundry-production
+  DIFOUNDRY_BOOTSTRAP_ENABLED: "false"
+  DIFOUNDRY_RATE_LIMIT_PER_MINUTE: "180"
+  DIFOUNDRY_MAX_REQUEST_BYTES: "2000000"
+  DIFOUNDRY_LOGIN_LOCKOUT_THRESHOLD: "8"
+  DIFOUNDRY_LOGIN_LOCKOUT_SECONDS: "900"
+  # The in-pod edge proxy is the only process allowed to assert client identity.
+  DIFOUNDRY_TRUSTED_PROXY_CIDRS: 127.0.0.1/32
+  DIFOUNDRY_AUDIT_ANCHOR_PATH: /var/lib/difoundry-audit/anchors
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: difoundry-edge-proxy, namespace: difoundry}
+data:
+  nginx.conf: |
+    events { worker_connections 1024; }
+    http {
+      server_tokens off;
+      map $http_x_real_ip $verified_client_ip {
+        default $http_x_real_ip;
+        "" $remote_addr;
+      }
+      server {
+        listen 8080;
+        client_max_body_size 2m;
+        location / {
+          proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+          # The namespace-scoped NetworkPolicy admits only the ingress controller.
+          # Normalize its verified X-Real-IP to a single-hop assertion for the app.
+          proxy_set_header X-Forwarded-For $verified_client_ip;
+          proxy_set_header X-Request-ID $http_x_request_id;
+          proxy_http_version 1.1;
+          proxy_set_header Connection "";
+          proxy_pass http://127.0.0.1:8000;
+        }
+      }
+    }
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: difoundry-audit-anchors, namespace: difoundry}
+spec:
+  accessModes: [ReadWriteMany]
+  resources: {requests: {storage: 10Gi}}
+  # The selected storage class must enforce retention/immutability or replicate
+  # these signed anchor objects to an external WORM/SIEM destination.
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: difoundry-api, namespace: difoundry}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app: difoundry-api}}
+  template:
+    metadata: {labels: {app: difoundry-api}}
+    spec:
+      terminationGracePeriodSeconds: 60
+      serviceAccountName: difoundry-api
+      securityContext: {runAsNonRoot: true, seccompProfile: {type: RuntimeDefault}}
+      containers:
+        - name: api
+          image: ghcr.io/mmvfirm/difoundry:0.7.2
+          args: ["uvicorn", "difoundry.api:app", "--host", "127.0.0.1", "--port", "8000", "--no-proxy-headers"]
+          envFrom:
+            - configMapRef: {name: difoundry-config}
+            - secretRef: {name: difoundry-secrets}
+          resources:
+            requests: {cpu: 250m, memory: 384Mi}
+            limits: {cpu: "2", memory: 2Gi}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: ["ALL"]}
+          volumeMounts:
+            - {name: tmp, mountPath: /tmp}
+            - {name: audit-anchors, mountPath: /var/lib/difoundry-audit}
+        - name: verified-edge
+          image: nginx:1.27-alpine
+          ports: [{name: proxy, containerPort: 8080}]
+          readinessProbe: {httpGet: {path: /platform/readiness, port: proxy}, initialDelaySeconds: 5, periodSeconds: 10}
+          livenessProbe: {httpGet: {path: /platform/liveness, port: proxy}, initialDelaySeconds: 10, periodSeconds: 20}
+          resources:
+            requests: {cpu: 25m, memory: 32Mi}
+            limits: {cpu: 250m, memory: 128Mi}
+          securityContext:
+            runAsUser: 101
+            runAsGroup: 101
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: ["ALL"]}
+          volumeMounts:
+            - {name: edge-config, mountPath: /etc/nginx/nginx.conf, subPath: nginx.conf, readOnly: true}
+            - {name: nginx-cache, mountPath: /var/cache/nginx}
+            - {name: nginx-run, mountPath: /var/run}
+      volumes:
+        - {name: tmp, emptyDir: {medium: Memory}}
+        - {name: nginx-cache, emptyDir: {medium: Memory}}
+        - {name: nginx-run, emptyDir: {medium: Memory}}
+        - {name: edge-config, configMap: {name: difoundry-edge-proxy}}
+        - {name: audit-anchors, persistentVolumeClaim: {claimName: difoundry-audit-anchors}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: difoundry-worker, namespace: difoundry}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app: difoundry-worker}}
+  template:
+    metadata: {labels: {app: difoundry-worker}}
+    spec:
+      terminationGracePeriodSeconds: 120
+      serviceAccountName: difoundry-worker
+      securityContext: {runAsNonRoot: true, seccompProfile: {type: RuntimeDefault}}
+      containers:
+        - name: worker
+          image: ghcr.io/mmvfirm/difoundry:0.7.2
+          args: ["difoundry-worker", "--poll-seconds", "1", "--lease-seconds", "60", "--heartbeat-seconds", "20"]
+          envFrom:
+            - configMapRef: {name: difoundry-config}
+            - secretRef: {name: difoundry-secrets}
+          resources:
+            requests: {cpu: 250m, memory: 384Mi}
+            limits: {cpu: "2", memory: 2Gi}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: ["ALL"]}
+          volumeMounts:
+            - {name: tmp, mountPath: /tmp}
+            - {name: audit-anchors, mountPath: /var/lib/difoundry-audit}
+      volumes:
+        - {name: tmp, emptyDir: {medium: Memory}}
+        - {name: audit-anchors, persistentVolumeClaim: {claimName: difoundry-audit-anchors}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: difoundry-api, namespace: difoundry}
+spec:
+  selector: {app: difoundry-api}
+  ports: [{name: http, port: 80, targetPort: proxy}]
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: difoundry-api, namespace: difoundry}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: difoundry-api}
+  minReplicas: 3
+  maxReplicas: 20
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: difoundry-worker, namespace: difoundry}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: difoundry-worker}
+  minReplicas: 2
+  maxReplicas: 30
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 70}}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: difoundry-api, namespace: difoundry}
+spec: {minAvailable: 2, selector: {matchLabels: {app: difoundry-api}}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: default-deny, namespace: difoundry}
+spec: {podSelector: {}, policyTypes: [Ingress, Egress]}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: api-ingress, namespace: difoundry}
+spec:
+  podSelector: {matchLabels: {app: difoundry-api}}
+  policyTypes: [Ingress]
+  ingress:
+    - from: [{namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: ingress-nginx}}}]
+      ports: [{protocol: TCP, port: 8080}]
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: difoundry
+  namespace: difoundry
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 2m
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  tls: [{hosts: [foundry.example.com], secretName: difoundry-tls}]
+  rules:
+    - host: foundry.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: {service: {name: difoundry-api, port: {name: http}}}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata: {name: difoundry-api, namespace: difoundry}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata: {name: difoundry-worker, namespace: difoundry}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: controlled-egress, namespace: difoundry}
+spec:
+  podSelector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values: [difoundry-api, difoundry-worker]
+  policyTypes: [Egress]
+  egress:
+    - to:
+        - namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: kube-system}}
+      ports:
+        - {protocol: UDP, port: 53}
+        - {protocol: TCP, port: 53}
+    - to:
+        - namespaceSelector: {matchLabels: {difoundry.io/database-access: "true"}}
+          podSelector: {matchLabels: {app: postgres}}
+      ports:
+        - {protocol: TCP, port: 5432}
+    - to:
+        - podSelector: {matchLabels: {app: difoundry-egress-proxy}}
+      ports:
+        - {protocol: TCP, port: 8443}
