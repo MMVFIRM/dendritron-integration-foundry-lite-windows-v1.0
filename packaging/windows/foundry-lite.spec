@@ -8,7 +8,7 @@ SRC = ROOT / "src"
 datas = collect_data_files("difoundry")
 binaries = []
 hiddenimports = []
-for package in ("uvicorn", "cryptography", "jsonschema", "sqlalchemy", "pystray", "PIL"):
+for package in ("uvicorn", "cryptography", "jsonschema", "rfc3987_syntax", "sqlalchemy", "pystray", "PIL"):
     package_datas, package_binaries, package_hidden = collect_all(package)
     datas += package_datas
     binaries += package_binaries

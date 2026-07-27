@@ -139,6 +139,7 @@ def test_windows_packaging_files_encode_safe_one_click_defaults():
     compile(spec, "foundry-lite.spec", "exec")
     assert 'console=False' in spec
     assert 'name="FoundryLite"' in spec
+    assert '"rfc3987_syntax"' in spec
 
     workflow = (root / ".github/workflows/windows-installer.yml").read_text()
     assert "runs-on: windows-latest" in workflow
