@@ -7,6 +7,7 @@ import zipfile
 from pathlib import Path
 
 import httpx
+import pytest
 from fastapi.testclient import TestClient
 
 from difoundry.lite.api import create_lite_app
@@ -14,6 +15,15 @@ from difoundry.lite.desktop import build_parser, main as desktop_main
 from difoundry.lite.key_protection import load_or_create_vault_key
 from difoundry.lite.service import LiteContext
 from difoundry.lite.settings import LiteSettings, default_data_dir
+
+
+@pytest.fixture(autouse=True)
+def isolated_test_vault(monkeypatch: pytest.MonkeyPatch):
+    def test_key(path: Path) -> bytes:
+        path.write_text("test-only-key", encoding="ascii")
+        return b"x" * 32
+
+    monkeypatch.setattr("difoundry.lite.vault.load_or_create_vault_key", test_key)
 
 
 def make_context(tmp_path: Path) -> LiteContext:
@@ -119,7 +129,7 @@ def test_desktop_health_check_runs_real_local_server(monkeypatch, tmp_path: Path
 def test_common_system_catalog_is_preconfigured(tmp_path: Path):
     context = make_context(tmp_path)
     names = {item["name"] for item in context.catalog.search("")}
-    assert {"HubSpot", "Slack", "Stripe", "GitHub", "Microsoft 365 / Graph", "QuickBooks Online"} <= names
+    assert names == {"Google Sheets", "Microsoft 365", "Salesforce", "Custom REST API", "Custom GraphQL", "OData Service"}
 
 
 def test_windows_packaging_files_encode_safe_one_click_defaults():
@@ -170,3 +180,20 @@ def test_ui_includes_first_run_and_recovery_surfaces(tmp_path: Path):
     assert "Create backup now" in html
     assert "Download support bundle" in html
     assert "system-catalog" in html
+
+
+def test_connect_system_dialog_close_controls_do_not_submit(tmp_path: Path):
+    context = make_context(tmp_path)
+    client = TestClient(create_lite_app(context))
+    html = client.get("/console").text
+    script = client.get("/lite-static/app.js").text
+
+    assert 'type="button" class="icon-button" id="close-system-dialog"' in html
+    assert 'type="button" class="secondary" id="cancel-system-dialog"' in html
+    assert "$('#close-system-dialog').addEventListener('click',closeSystemDialog)" in script
+    assert "dialog.addEventListener('close',resetSystemDialog)" in script
+    assert "Every system shown here has a working local connection path." in html
+    assert 'id="connector-gallery"' in html
+    assert "data-oauth-provider" in script
+    assert "MMV operates no OAuth service" in html
+    assert "Advanced: connect a custom or developer system" in html

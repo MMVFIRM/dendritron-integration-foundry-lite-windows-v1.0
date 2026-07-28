@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qs, urlparse
 
 import httpx
 import pytest
@@ -55,7 +56,13 @@ def adapter_factory(profile, secrets):
 
 
 @pytest.fixture
-def context(tmp_path: Path) -> LiteContext:
+def context(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> LiteContext:
+    def test_vault_key(path: Path) -> bytes:
+        path.write_text("test-only-key", encoding="ascii")
+        path.chmod(0o600)
+        return b"x" * 32
+
+    monkeypatch.setattr("difoundry.lite.vault.load_or_create_vault_key", test_vault_key)
     settings=LiteSettings(tmp_path,tmp_path/"lite.sqlite3",tmp_path/"vault.key",request_timeout_seconds=2)
     return LiteContext.build(settings,AutonomousDiscoveryEngine(client_factory=MockClient,timeout=2),adapter_factory)
 
@@ -251,6 +258,7 @@ def test_package_import_does_not_create_local_database(tmp_path: Path):
     assert not (tmp_path/".difoundry-lite").exists()
 
 
+@pytest.mark.skipif(__import__("os").name == "nt", reason="POSIX permission bits are not enforced on Windows")
 def test_vault_key_permissions_are_private_when_supported(context: LiteContext):
     mode=context.settings.key_path.stat().st_mode & 0o777
     assert mode & 0o077 == 0
@@ -279,6 +287,8 @@ def test_live_uvicorn_lite_starts_without_login(tmp_path: Path):
     }
     code = (
         "import uvicorn; "
+        "import difoundry.lite.vault as vault_module; "
+        "vault_module.load_or_create_vault_key=lambda path: b'x'*32; "
         "from difoundry.lite.api import create_lite_app; "
         f"uvicorn.run(create_lite_app(), host='127.0.0.1', port={port}, proxy_headers=False, log_level='warning')"
     )
@@ -312,3 +322,145 @@ def test_live_uvicorn_lite_starts_without_login(tmp_path: Path):
         except subprocess.TimeoutExpired:
             process.kill()
             process.wait(timeout=5)
+
+
+OAUTH_REQUESTS: list[httpx.Request] = []
+
+
+def oauth_transport(request: httpx.Request) -> httpx.Response:
+    OAUTH_REQUESTS.append(request)
+    token_hosts = {
+        "oauth2.googleapis.com": "google",
+        "login.salesforce.com": "salesforce",
+        "login.microsoftonline.com": "microsoft",
+    }
+    provider = token_hosts.get(request.url.host)
+    if provider and ("token" in request.url.path or "oauth2" in request.url.path):
+        token = {
+            "access_token": f"{provider}-access-token",
+            "refresh_token": f"{provider}-refresh-token",
+            "expires_in": 3600,
+            "token_type": "Bearer",
+        }
+        if provider == "salesforce":
+            token["instance_url"] = "https://local-test.my.salesforce.com"
+        return httpx.Response(
+            200,
+            json=token,
+        )
+    if "revoke" in request.url.path or "refresh-tokens" in request.url.path:
+        return httpx.Response(200)
+    return httpx.Response(404)
+
+
+class OAuthMockClient(httpx.Client):
+    def __init__(self, **kwargs: Any):
+        super().__init__(transport=httpx.MockTransport(oauth_transport), **kwargs)
+
+
+def test_google_oauth_pkce_callback_encrypts_tokens_and_creates_system(context: LiteContext):
+    OAUTH_REQUESTS.clear()
+    context.oauth.client_factory = OAuthMockClient
+    configured = context.oauth.configure("google-sheets", "client-id.apps.googleusercontent.com")
+    assert configured["configured"] is True
+    provider_row = context.database.one("SELECT * FROM lite_oauth_providers WHERE provider_id='google-sheets'")
+    assert provider_row["client_id"] == "client-id.apps.googleusercontent.com"
+
+    client, headers = session_client(context)
+    started = client.post("/lite/oauth/google-sheets/start", headers=headers)
+    assert started.status_code == 200
+    authorization_url = started.json()["authorization_url"]
+    query = parse_qs(urlparse(authorization_url).query)
+    assert query["code_challenge_method"] == ["S256"]
+    assert "https://www.googleapis.com/auth/spreadsheets" in query["scope"][0]
+
+    callback = client.get(
+        "/lite/oauth/google-sheets/callback",
+        params={"state": query["state"][0], "code": "authorization-code"},
+        follow_redirects=False,
+    )
+    assert callback.status_code == 303
+    assert callback.headers["location"] == "/console?oauth=connected"
+    system = context.service.list_systems()[0]
+    assert system["name"] == "Google Sheets"
+    assert system["auth_kind"] == "oauth2"
+    assert system["status"] == "ready"
+    secret_row = context.database.one("SELECT * FROM lite_secrets ORDER BY created_at DESC LIMIT 1")
+    assert "google-access-token" not in secret_row["ciphertext"]
+    token_request = next(request for request in OAUTH_REQUESTS if request.url.host == "oauth2.googleapis.com")
+    assert "client_secret" not in parse_qs(token_request.content.decode())
+
+
+def test_oauth_state_is_single_use(context: LiteContext):
+    context.oauth.client_factory = OAuthMockClient
+    context.oauth.configure("google-sheets", "client-id", "client-secret")
+    redirect_uri = "http://127.0.0.1:8765/lite/oauth/google-sheets/callback"
+    authorization_url = context.oauth.start("google-sheets", redirect_uri)
+    state = parse_qs(urlparse(authorization_url).query)["state"][0]
+    context.oauth.exchange("google-sheets", state, "code", redirect_uri)
+    with pytest.raises(ValueError, match="already been used"):
+        context.oauth.exchange("google-sheets", state, "code", redirect_uri)
+
+
+def test_free_oauth_registry_is_local_and_truthful(context: LiteContext):
+    providers = {provider["provider_id"]: provider for provider in context.oauth.status()}
+    assert set(providers) == {"google-sheets", "microsoft-365", "salesforce"}
+    assert all(provider["local_only"] for provider in providers.values())
+    assert all(provider["client_secret_required"] is False for provider in providers.values())
+    assert providers["google-sheets"]["client_secret_optional"] is True
+    assert providers["microsoft-365"]["client_secret_optional"] is False
+
+
+def test_local_google_sheets_to_salesforce_connection(context: LiteContext):
+    OAUTH_REQUESTS.clear()
+    context.oauth.client_factory = OAuthMockClient
+    context.oauth.configure("google-sheets", "google-public-client")
+    context.oauth.configure("salesforce", "salesforce-public-client")
+    client, headers = session_client(context)
+
+    for provider_id in ("google-sheets", "salesforce"):
+        started = client.post(f"/lite/oauth/{provider_id}/start", headers=headers)
+        assert started.status_code == 200
+        query = parse_qs(urlparse(started.json()["authorization_url"]).query)
+        state = query["state"][0]
+        assert "code_challenge" in query
+        callback = client.get(
+            f"/lite/oauth/{provider_id}/callback",
+            params={"state": state, "code": f"{provider_id}-authorization-code"},
+            follow_redirects=False,
+        )
+        assert callback.status_code == 303
+
+    systems = {system["name"]: system for system in context.service.list_systems()}
+    assert set(systems) == {"Google Sheets", "Salesforce"}
+    salesforce_row = context.database.one(
+        "SELECT base_url FROM lite_systems WHERE system_id=?", (systems["Salesforce"]["system_id"],)
+    )
+    assert salesforce_row["base_url"].startswith("https://local-test.my.salesforce.com/")
+
+    connection = context.service.compose(
+        systems["Google Sheets"]["system_id"],
+        [systems["Salesforce"]["system_id"]],
+        "When a sheet row changes, create a Salesforce contact.",
+    )
+    assert connection["preview"]["actions"]
+    assert connection["source_system_id"] == systems["Google Sheets"]["system_id"]
+    assert connection["target_system_ids"] == [systems["Salesforce"]["system_id"]]
+
+
+def test_microsoft_365_public_client_creates_calendar_profile(context: LiteContext):
+    context.oauth.client_factory = OAuthMockClient
+    context.oauth.configure("microsoft-365", "entra-public-client")
+    client, headers = session_client(context)
+    started = client.post("/lite/oauth/microsoft-365/start", headers=headers)
+    query = parse_qs(urlparse(started.json()["authorization_url"]).query)
+    assert query["code_challenge_method"] == ["S256"]
+    callback = client.get(
+        "/lite/oauth/microsoft-365/callback",
+        params={"state": query["state"][0], "code": "microsoft-code"},
+        follow_redirects=False,
+    )
+    assert callback.status_code == 303
+    system = context.service.list_systems()[0]
+    assert system["name"] == "Microsoft 365"
+    assert "Calendar Event" in system["capabilities"]["objects"]
