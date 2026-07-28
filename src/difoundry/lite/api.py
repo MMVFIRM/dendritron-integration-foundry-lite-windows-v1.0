@@ -7,16 +7,25 @@ import webbrowser
 from contextlib import asynccontextmanager
 from importlib.resources import files
 from typing import Any
+from urllib.parse import urlencode
 
 import uvicorn
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .service import LiteContext
 from .settings import LiteSettings
+from .oauth import (
+    GOOGLE,
+    MICROSOFT,
+    SALESFORCE,
+    google_sheets_profile,
+    microsoft_365_profile,
+    salesforce_profile,
+)
 
 
 class SystemCreate(BaseModel):
@@ -48,6 +57,11 @@ class StartupRequest(BaseModel):
     enabled: bool
 
 
+class OAuthConfigureRequest(BaseModel):
+    client_id: str = Field(min_length=1, max_length=500)
+    client_secret: str = Field(default="", max_length=1000)
+
+
 def create_lite_app(context: LiteContext | None = None, shutdown_callback: Any | None = None) -> FastAPI:
     context = context or LiteContext.build()
     service = context.service
@@ -62,7 +76,7 @@ def create_lite_app(context: LiteContext | None = None, shutdown_callback: Any |
 
     app = FastAPI(
         title="Dendritron Foundry Lite",
-        version="1.0.0",
+        version="1.1.0",
         docs_url=None,
         redoc_url=None,
         openapi_url=None,
@@ -89,7 +103,8 @@ def create_lite_app(context: LiteContext | None = None, shutdown_callback: Any |
             pass
         if not context.settings.allow_lan and not allowed:
             return Response("Foundry Lite is local-only by default", status_code=403)
-        if request.url.path.startswith("/lite/") and request.url.path not in {"/lite/liveness"}:
+        oauth_callback = request.url.path.startswith("/lite/oauth/") and request.url.path.endswith("/callback")
+        if request.url.path.startswith("/lite/") and request.url.path not in {"/lite/liveness"} and not oauth_callback:
             cookie = request.cookies.get("foundry_lite_session")
             header = request.headers.get("X-Foundry-Lite-Session")
             if (
@@ -125,6 +140,82 @@ def create_lite_app(context: LiteContext | None = None, shutdown_callback: Any |
     @app.get("/lite/catalog")
     def catalog(q: str = ""):
         return {"connectors": context.catalog.search(q)}
+
+    def oauth_redirect_uri(provider_id: str, request: Request) -> str:
+        provider = context.oauth.provider(provider_id)
+        port = request.url.port
+        default_port = (request.url.scheme == "http" and port == 80) or (request.url.scheme == "https" and port == 443)
+        authority = provider.redirect_hostname if not port or default_port else f"{provider.redirect_hostname}:{port}"
+        return f"{request.url.scheme}://{authority}/lite/oauth/{provider_id}/callback"
+
+    @app.get("/lite/oauth/providers")
+    def oauth_providers(request: Request):
+        providers = context.oauth.status()
+        for provider in providers:
+            provider["callback_url"] = oauth_redirect_uri(provider["provider_id"], request)
+        return {"providers": providers}
+
+    @app.post("/lite/oauth/{provider_id}/configure")
+    def oauth_configure(provider_id: str, body: OAuthConfigureRequest):
+        try:
+            return context.oauth.configure(provider_id, body.client_id, body.client_secret)
+        except ValueError as exc:
+            raise HTTPException(400, str(exc)) from exc
+
+    @app.post("/lite/oauth/{provider_id}/start")
+    def oauth_start(provider_id: str, request: Request):
+        try:
+            redirect_uri = oauth_redirect_uri(provider_id, request)
+            return {"authorization_url": context.oauth.start(provider_id, redirect_uri)}
+        except ValueError as exc:
+            raise HTTPException(400, str(exc)) from exc
+
+    @app.get("/lite/oauth/{provider_id}/callback")
+    def oauth_callback(
+        provider_id: str,
+        request: Request,
+        state: str = "",
+        code: str = "",
+        error: str = "",
+    ):
+        if error:
+            return RedirectResponse(url="/console?" + urlencode({"oauth": "error", "message": error}), status_code=303)
+        try:
+            redirect_uri = oauth_redirect_uri(provider_id, request)
+            credentials = context.oauth.exchange(provider_id, state, code, redirect_uri)
+            provider = context.oauth.provider(provider_id)
+            system_id = context.database.new_id("sys")
+            if provider_id == GOOGLE.provider_id:
+                profile = google_sheets_profile(system_id)
+            elif provider_id == SALESFORCE.provider_id:
+                profile = salesforce_profile(system_id, credentials.get("instance_url"))
+            elif provider_id == MICROSOFT.provider_id:
+                profile = microsoft_365_profile(system_id)
+            else:
+                raise ValueError("Provider profile is not installed")
+            service.add_profiled_system(
+                provider.name,
+                profile.base_url or provider.base_url,
+                "oauth2",
+                credentials,
+                profile,
+                "provider-oauth",
+            )
+            return RedirectResponse(url="/console?oauth=connected", status_code=303)
+        except (ValueError, KeyError) as exc:
+            return RedirectResponse(
+                url="/console?" + urlencode({"oauth": "error", "message": str(exc)}), status_code=303
+            )
+
+    @app.post("/lite/systems/{system_id}/oauth/revoke")
+    def oauth_revoke(system_id: str):
+        try:
+            provider_revoked = service.revoke_oauth_system(system_id)
+            return {"revoked": True, "provider_revoked": provider_revoked}
+        except KeyError as exc:
+            raise HTTPException(404, str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(409, str(exc)) from exc
 
     @app.post("/lite/systems")
     def add_system(body: SystemCreate):

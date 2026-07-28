@@ -7,12 +7,12 @@ The Windows edition is a per-user installation. It bundles Python and all applic
 Install Python 3.11 and Inno Setup 6, then run:
 
 ```powershell
-.\packaging\windows\build.ps1 -Version 1.0.0
+.\packaging\windows\build.ps1 -Version 1.1.0
 ```
 
 Outputs:
 
-- `Dendritron-Foundry-Lite-1.0.0-Setup.exe`
+- `Dendritron-Foundry-Lite-1.1.0-Setup.exe`
 - Portable ZIP
 - CycloneDX SBOM
 - SHA-256 checksums

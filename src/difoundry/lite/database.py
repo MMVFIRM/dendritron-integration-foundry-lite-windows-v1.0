@@ -45,6 +45,13 @@ CREATE TABLE IF NOT EXISTS lite_secrets (
     created_at TEXT NOT NULL,
     updated_at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS lite_oauth_providers (
+    provider_id TEXT PRIMARY KEY,
+    client_id TEXT NOT NULL,
+    secret_ref TEXT NOT NULL,
+    scopes_json TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS lite_connections (
     connection_id TEXT PRIMARY KEY,
     name TEXT NOT NULL,

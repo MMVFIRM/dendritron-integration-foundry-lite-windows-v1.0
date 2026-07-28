@@ -9,7 +9,7 @@ Download the installer, launch the app, connect the systems you use, enter the c
 ## Windows user experience
 
 ```text
-Run Dendritron-Foundry-Lite-1.0.0-Setup.exe
+Run Dendritron-Foundry-Lite-1.1.0-Setup.exe
         ↓
 Foundry installs for the current Windows user
         ↓
@@ -50,22 +50,20 @@ The application remains active in the Windows notification area after the browse
 
 ## Preconfigured systems
 
+The free edition has no MMV account, OAuth broker, hosted callback, or cloud dependency. OAuth authorization, callback handling, token exchange, refresh, revocation, and encrypted token storage run on the user's computer.
+
+Google Sheets, Microsoft 365, and Salesforce use public desktop-client OAuth with PKCE and need only an application/client ID owned by the user or their organization. After the one-time administrator setup, each provider uses a normal browser sign-in.
+
 The connection picker includes starting configurations for:
 
-- HubSpot
-- Slack
-- Stripe
-- GitHub
-- Microsoft 365 / Microsoft Graph
-- Notion
-- Airtable
-- QuickBooks Online
+- Google Sheets
+- Microsoft 365 calendar through Microsoft Graph
 - Salesforce
-- Shopify
-- Zendesk
-- Custom REST, GraphQL, OData, and internal systems
+- Custom REST APIs
+- Custom GraphQL APIs
+- OData services
 
-These entries supply safe URL and authentication hints. Foundry still verifies the live connected system rather than treating the catalog as authoritative.
+This list is intentionally limited to connection paths the free application actually implements. Unsupported commercial services are not advertised as available.
 
 ## Autonomous discovery
 
@@ -116,7 +114,7 @@ LAN mode remains an explicit advanced setting and should be placed behind an aut
 PyInstaller must build Windows executables on Windows. The repository includes a complete Windows build and release pipeline:
 
 ```powershell
-.\packaging\windows\build.ps1 -Version 1.0.0
+.\packaging\windows\build.ps1 -Version 1.1.0
 ```
 
 The build performs:
@@ -163,7 +161,9 @@ The Windows installer itself must be compiled and smoke-tested on a Windows runn
 
 ## Current boundaries
 
-The release does not include provider-owned OAuth client credentials. Providers such as Intuit, Google, Microsoft, and Salesforce may require an OAuth application registration or administrator-issued token. The provider catalog reduces setup but cannot replace provider authorization.
+OAuth providers still require a registered application identity. To keep this edition free and independent, those registrations belong to the user or their organization. The setup screen opens the provider console, displays the exact loopback callback URL, and stores the resulting client configuration locally. The application does not embed a shared confidential client secret.
+
+HubSpot is intentionally not advertised as a free-edition OAuth connector: its standard CRM OAuth exchange requires a confidential client secret and an HTTPS production callback, which cannot be delivered as a genuinely local-only public desktop flow. Google Sheets, Microsoft 365, and Salesforce can be configured as public desktop clients with PKCE and no locally stored confidential secret.
 
 The current desktop edition also does not include:
 

@@ -122,15 +122,33 @@
 
   <dialog id="system-dialog">
     <form method="dialog" id="system-form">
-      <div class="dialog-head"><div><h2>Connect a system</h2><p>Give Foundry access. It will discover the schema itself.</p></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
-      <label>System or app<input id="system-name" required list="system-catalog" autocomplete="off" placeholder="HubSpot, QuickBooks, Slack, internal system..."><datalist id="system-catalog"></datalist></label>
-      <label>System URL<input id="system-url" required type="url" placeholder="Foundry fills this for known systems"></label><p id="catalog-note" class="field-note"></p>
-      <label>How do you authorize access?
-        <select id="auth-kind"><option value="none">No authentication</option><option value="api_key">API key</option><option value="bearer">Bearer token</option><option value="basic">Username and password</option></select>
-      </label>
-      <div id="credential-fields"></div>
-      <div class="notice"><b>What Foundry does:</b> checks standard schema endpoints, GraphQL introspection, OData metadata, capability indexes, then safe read-only responses. It will not perform destructive discovery actions.</div>
-      <div class="dialog-actions"><button class="secondary" value="cancel">Cancel</button><button type="submit" class="primary" value="default">Connect and learn</button></div>
+      <div class="dialog-head"><div><h2>Choose a system</h2><p>Every system shown here has a working local connection path.</p></div><button type="button" class="icon-button" id="close-system-dialog" aria-label="Close">×</button></div>
+      <div id="oauth-picker">
+        <div class="connector-gallery" id="connector-gallery"></div>
+        <p class="managed-note">Authorization and encrypted tokens stay on this computer. MMV operates no OAuth service.</p>
+      </div>
+      <section id="oauth-setup" class="oauth-setup hidden">
+        <button type="button" class="text-button" id="oauth-setup-back">← Back to systems</button>
+        <h3 id="oauth-setup-title"></h3>
+        <p id="oauth-setup-copy" class="meta"></p>
+        <a id="oauth-setup-link" class="secondary setup-link" target="_blank" rel="noreferrer">Open provider setup</a>
+        <label>Local callback URL<input id="oauth-callback-url" readonly></label>
+        <label>Application client ID<input id="provider-client-id" autocomplete="off"></label>
+        <label id="provider-client-secret-row"><span id="provider-client-secret-label">Application client secret</span><input id="provider-client-secret" type="password" autocomplete="off"></label>
+        <div class="notice"><b>Local-only:</b> these application settings and all resulting tokens are encrypted in the Windows vault and are never sent to MMV.</div>
+        <div class="dialog-actions"><button type="button" class="secondary" id="oauth-setup-cancel">Cancel</button><button type="button" class="primary" id="oauth-save-connect">Save and sign in</button></div>
+      </section>
+      <details class="advanced-connect">
+        <summary>Advanced: connect a custom or developer system</summary>
+        <label>System or app<input id="system-name" list="system-catalog" autocomplete="off" placeholder="Custom API or internal system"><datalist id="system-catalog"></datalist></label>
+        <label>System URL<input id="system-url" type="url" placeholder="https://api.example.com"></label><p id="catalog-note" class="field-note"></p>
+        <label>Authorization method
+          <select id="auth-kind"><option value="none">No authentication</option><option value="api_key">API key</option><option value="bearer">Bearer token</option><option value="basic">Username and password</option></select>
+        </label>
+        <div id="credential-fields"></div>
+        <div class="notice"><b>Advanced mode:</b> supports REST, GraphQL, and OData systems that expose a discoverable HTTP interface.</div>
+        <div class="dialog-actions"><button type="button" class="secondary" id="cancel-system-dialog">Cancel</button><button type="submit" class="primary" value="default">Connect custom system</button></div>
+      </details>
     </form>
   </dialog>
 

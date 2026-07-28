@@ -20,6 +20,7 @@ from .catalog import ConnectorCatalog
 from .database import LiteDatabase, now_iso
 from .discovery import AutonomousDiscoveryEngine
 from .intent import TaskInterpreter
+from .oauth import OAuthManager
 from .settings import LiteSettings
 from .vault import LocalVault
 
@@ -66,6 +67,7 @@ class LiteContext:
     settings: LiteSettings
     database: LiteDatabase
     vault: LocalVault
+    oauth: OAuthManager
     discovery: AutonomousDiscoveryEngine
     catalog: ConnectorCatalog
     adapter_factory: AdapterFactory | None = None
@@ -86,10 +88,12 @@ class LiteContext:
             raise RuntimeError(f"Foundry Lite database integrity check failed: {integrity['results']}")
         if not database.created_new:
             database.backup_if_due(settings.backup_dir or (settings.data_dir / "Backups"), retain=settings.backup_retention)
+        vault = LocalVault(database, settings.key_path)
         context = cls(
             settings,
             database,
-            LocalVault(database, settings.key_path),
+            vault,
+            OAuthManager(database, vault),
             discovery
             or AutonomousDiscoveryEngine(
                 timeout=settings.request_timeout_seconds,
@@ -190,6 +194,75 @@ class FoundryLiteService:
                 {"system_id": system_id, "error": str(exc)},
             )
         return self.get_system(system_id)
+
+    def add_profiled_system(
+        self,
+        name: str,
+        base_url: str,
+        auth_kind: str,
+        credentials: dict[str, Any],
+        profile: SystemProfile,
+        discovery_method: str,
+    ) -> dict[str, Any]:
+        system_id = profile.system_id
+        stamp = now_iso()
+        secret_ref = self.vault.put(credentials)
+        profile = profile.model_copy(
+            update={"authentication": profile.authentication.model_copy(update={"kind": auth_kind})}
+        )
+        with self.db.transaction() as db:
+            db.execute(
+                "INSERT INTO lite_systems(system_id,name,base_url,auth_kind,secret_ref,status,profile_json,discovery_json,last_error,created_at,updated_at) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+                (
+                    system_id,
+                    name,
+                    base_url,
+                    auth_kind,
+                    secret_ref,
+                    "ready",
+                    self.db.dumps(profile.model_dump(mode="json")),
+                    self.db.dumps({"method": discovery_method, "evidence": [], "warnings": []}),
+                    None,
+                    stamp,
+                    stamp,
+                ),
+            )
+        self._activity(
+            None,
+            "system",
+            "success",
+            f"Connected {name} with OAuth",
+            {"system_id": system_id, "method": discovery_method},
+        )
+        return self.get_system(system_id)
+
+    def _system_credentials(self, row: dict[str, Any] | None) -> dict[str, Any]:
+        if not row or not row.get("secret_ref"):
+            return {}
+        credentials = self.vault.resolve(row["secret_ref"])
+        if row.get("auth_kind") != "oauth2":
+            return credentials
+        refreshed = self.context.oauth.refresh(credentials)
+        if refreshed != credentials:
+            self.vault.put(refreshed, row["secret_ref"])
+        return refreshed
+
+    def revoke_oauth_system(self, system_id: str) -> bool:
+        row = self.db.one("SELECT * FROM lite_systems WHERE system_id=?", (system_id,))
+        if not row:
+            raise KeyError("System not found")
+        if row["auth_kind"] != "oauth2":
+            raise ValueError("System is not connected with OAuth")
+        credentials = self._system_credentials(row)
+        provider_revoked = self.context.oauth.revoke(credentials)
+        self.vault.delete(row["secret_ref"])
+        with self.db.transaction() as db:
+            db.execute(
+                "UPDATE lite_systems SET secret_ref=NULL,status='needs_attention',last_error=?,updated_at=? WHERE system_id=?",
+                ("Local OAuth credentials removed; reconnect this system", now_iso(), system_id),
+            )
+        return provider_revoked
 
     def list_systems(self) -> list[dict[str, Any]]:
         return [self._system_public(row) for row in self.db.all("SELECT * FROM lite_systems ORDER BY created_at DESC")]
@@ -535,7 +608,7 @@ class FoundryLiteService:
                 continue
             source_row = self.db.one("SELECT * FROM lite_systems WHERE system_id=?", (row["source_system_id"],))
             profile = self._profile(row["source_system_id"])
-            secret = self.vault.resolve(source_row["secret_ref"]) if source_row and source_row["secret_ref"] else {}
+            secret = self._system_credentials(source_row)
             adapter = self.context.adapter_factory(profile, secret) if self.context.adapter_factory else GenericHTTPAdapter(profile, secret)
             response = adapter.execute(operation, {}, {}, {}, f"poll:{row['connection_id']}:{now_iso()}", simulate=False)
             body = response.get("body", response)
@@ -624,8 +697,8 @@ class FoundryLiteService:
             profiles[target_id] = self._profile(target_id)
         adapters = {}
         for target_id in target_ids:
-            system_row = self.db.one("SELECT secret_ref FROM lite_systems WHERE system_id=?", (target_id,))
-            secrets_value = self.vault.resolve(system_row["secret_ref"]) if system_row and system_row["secret_ref"] else {}
+            system_row = self.db.one("SELECT * FROM lite_systems WHERE system_id=?", (target_id,))
+            secrets_value = self._system_credentials(system_row)
             profile = profiles[target_id]
             if self.context.adapter_factory:
                 adapters[target_id] = self.context.adapter_factory(profile, secrets_value)

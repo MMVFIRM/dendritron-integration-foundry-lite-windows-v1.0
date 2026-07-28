@@ -58,8 +58,9 @@ Supported v0.1 authorization inputs:
 - API key
 - Bearer token
 - Basic credentials for discovery
+- Local public-client OAuth for Google Sheets, Microsoft 365, and Salesforce
 
-The Generic HTTP execution adapter directly supports API-key and bearer-token profiles. Basic and provider-specific OAuth execution require an injected or future provider adapter.
+The Generic HTTP execution adapter resolves OAuth access tokens from the encrypted local vault. Authorization, token exchange, refresh, and supported revocation calls go directly from the desktop to the provider. MMV operates no OAuth broker. Provider capability profiles define the safe objects and operations available after sign-in. Advanced API-key, bearer-token, and basic inputs remain available for custom systems.
 
 ## Opaque systems
 
@@ -67,7 +68,7 @@ When no safe capability surface can be discovered, Foundry reports that it canno
 
 Future discovery providers can add:
 
-- OAuth provider catalogs
+- Additional local OAuth provider and capability profiles
 - Local discovery agents
 - Database information-schema inspection
 - Message broker schemas
